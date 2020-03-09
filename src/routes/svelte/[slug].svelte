@@ -36,10 +36,10 @@
       case `If Statements`:
         return `is-success`;
         break;
-      case `While Loops`:
+      case `Loops`:
         return `is-warning`;
         break;
-      case `ForEach Loops`:
+      case `Components`:
         return `is-danger`;
         break;
       default:
@@ -79,7 +79,7 @@
   </div>
 </section>
 <section class="section">
-  <p class="content">Something about the project.</p>
+  <p class="content">{project.description}</p>
 
   <iframe title={project.title} src={project.src} />
 </section>
