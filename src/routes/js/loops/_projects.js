@@ -1,24 +1,31 @@
 const projects = [
     {
-        title: `Hello World`,
-        slug: "hello-world",
-        subtitle: `The simplest program. All coders start here.`,
-        src: `https://codepen.io/MrHullen/embed/eYYdjVZ?height=309&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`]
+        title: `Counting`,
+        slug: "counting",
+        subtitle: `Count up all the numbers to ten.`,
+        src: `https://codepen.io/MrHullen/embed/MWWqvmZ?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `Loops`]
     },
     {
-        title: `Say What`,
-        slug: "say-what",
-        subtitle: `What?`,
-        src: `https://codepen.io/MrHullen/embed/XWWjByM?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`]
+        title: `Fibonacci`,
+        slug: "fibonacci",
+        subtitle: `The classic number series.`,
+        src: `https://codepen.io/MrHullen/embed/WNNgEZy?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `Loops`]
     },
     {
-        title: `The Repeater`,
-        slug: "the-repeater",
-        subtitle: `Repeats whatever you put in.`,
-        src: `https://codepen.io/MrHullen/embed/BaazXBy?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`]
+        title: `Factorial`,
+        slug: "factorial",
+        subtitle: `Multiply the all the numbers together up to a given number.`,
+        src: `https://codepen.io/MrHullen/embed/ZEEMJvZ?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `Loops`]
+    },
+    {
+        title: `Hailstone Numbers`,
+        slug: "hailstone-numbers",
+        subtitle: `Times by three or divide by two - even or odd decides.`,
+        src: ``,
+        skills: [`Input`, `Output`, `Variables`, `Loops`]
     }
 ];
 

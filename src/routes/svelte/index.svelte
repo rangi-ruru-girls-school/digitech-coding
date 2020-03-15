@@ -18,10 +18,27 @@
 	<title>Svelte</title>
 </svelte:head>
 
-<h1>Svelte Projects</h1>
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href=".">DigiTech</a></li>
+    <li class="is-active"><a href="svelte">Svelte</a></li>
+  </ul>
+</nav>
 
-<ul>
-	{#each projects as project}
-		<li><a rel='prefetch' href='svelte/{project.slug}'>{project.title}</a></li>
-	{/each}
-</ul>
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Svelte</h1>
+      <h2 class="subtitle">A flexible and lightweight framework for creating responsive web apps.</h2>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <ul>
+    {#each projects as project}
+      <li>
+        <a rel='prefetch' href='svelte/{project.slug}'>{project.title}</a>
+      </li>
+    {/each}
+  </ul>
+</section>

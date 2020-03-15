@@ -36,10 +36,10 @@
       case `If Statements`:
         return `is-success`;
         break;
-      case `While Loops`:
+      case `Loops`:
         return `is-warning`;
         break;
-      case `ForEach Loops`:
+      case `Components`:
         return `is-danger`;
         break;
       default:

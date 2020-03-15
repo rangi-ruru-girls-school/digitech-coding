@@ -1,24 +1,24 @@
 const projects = [
     {
-        title: `Hello World`,
-        slug: "hello-world",
-        subtitle: `The simplest program. All coders start here.`,
-        src: `https://codepen.io/MrHullen/embed/eYYdjVZ?height=309&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`]
+        title: `Weekday List`,
+        slug: "weekday-list",
+        subtitle: `A simple list of the days of the week.`,
+        src: `https://codepen.io/MrHullen/embed/pooOLar?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
     },
     {
-        title: `Say What`,
-        slug: "say-what",
-        subtitle: `What?`,
-        src: `https://codepen.io/MrHullen/embed/XWWjByM?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`]
+        title: `Subject List`,
+        slug: "subject-list",
+        subtitle: `Which subjects are you doing?`,
+        src: `https://codepen.io/MrHullen/embed/pooNGGO?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
     },
     {
-        title: `The Repeater`,
-        slug: "the-repeater",
-        subtitle: `Repeats whatever you put in.`,
-        src: `https://codepen.io/MrHullen/embed/BaazXBy?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`]
+        title: `Shopping List`,
+        slug: "shopping-list",
+        subtitle: `Add and remove items from a list.`,
+        src: `https://codepen.io/MrHullen/embed/LYYbqJE?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
     }
 ];
 

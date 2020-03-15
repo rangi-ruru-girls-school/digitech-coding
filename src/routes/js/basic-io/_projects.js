@@ -19,6 +19,13 @@ const projects = [
         subtitle: `Repeats whatever you put in.`,
         src: `https://codepen.io/MrHullen/embed/BaazXBy?height=265&theme-id=light&default-tab=html,result&editable=true`,
         skills: [`Input`, `Output`, `Variables`]
+    },
+    {
+        title: `Mad Libs`,
+        slug: "mad-libs",
+        subtitle: `The classic party game - now in code!`,
+        src: ``,
+        skills: [`Input`, `Output`, `Variables`]
     }
 ];
 

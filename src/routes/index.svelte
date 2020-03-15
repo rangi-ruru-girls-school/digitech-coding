@@ -4,7 +4,7 @@
   }
 
   img {
-	  height: 10em;
+    height: 10em;
   }
 
   span {
@@ -17,7 +17,7 @@
   <title>Home</title>
 </svelte:head>
 
-<div class="tile is-ancestor">
+<section class="tile is-ancestor">
   <div class="tile is-parent">
     <a class="tile is-child box" href="html">
       <i class="fa-10x fas fa-code" />
@@ -32,8 +32,8 @@
   </div>
   <div class="tile is-parent">
     <a class="tile is-child box" href="svelte">
-      <img src="svelte-logo.png" alt="Svelte logo">
+      <img src="svelte-logo.png" alt="Svelte logo" />
       <span>Svelte</span>
     </a>
   </div>
-</div>
+</section>
