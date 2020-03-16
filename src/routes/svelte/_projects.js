@@ -3,7 +3,34 @@ const projects = [
         title: `Hello World`,
         slug: "hello-world",
         subtitle: `The simplest program. All coders start here.`,
-        description: ``,
+        description: `
+            <p>This project introduces how Svelte can help improve how your HTML and JavaScript interact.</p>
+            <p>When you write Svelte, you write your code into a <code>.svelte</code> file, which contains JavaScript, CSS, and HTML all in one place.</p>
+            <p>Svelt's main advantage that we'll be taking advantage of is that it makes it very easy to get information to and from the page.</p>
+            <p>Take a look at the jQuery version of Hello World:
+            <h3>HTML</h3>
+            <pre><code>&lt;h3&gt;Hello &lt;span id="txtName"&gt;&lt;/span&gt;!&lt;/h3&gt;</code></pre>
+            <h3>JavaScript (jQuery)</h3>
+            <pre><code>$('#txtName').text('world')</pre></code>
+            <p>Now compare that with the Svelte version and see how much less code it takes and how natural it feels to follow it.</p>
+            <h3>Svelte</h3>
+            <pre><code>&lt;script&gt;
+    let name = 'world'
+&lt;/script&gt;
+            
+&lt;h3&gt;Hello {name}!&lt;/h3&gt;</pre></code>
+            <h2>Project</h2>
+            <ol>
+                <li>Look over the code below, think about how it runs, and compare the output with the source code.</li>
+                <li>Create a new Svelte project from the template.</li>
+                <li>Add your Hello World! code.</li>
+                <li>In the terminal in VS Code, type <code>npm run dev</code>.</li>
+                <li>Check that your code works by going to <code>https://localhost:3000</code>.</li>
+                <li>Commit your code with an appropriate message.</li>
+            </ol>
+            <h2>Sandbox</h2>
+            <p>Feel free to play around with the example below to see how the web app reacts to your changes in a consequence-free environment.</p>
+            `,
         src: `https://svelte.dev/repl/hello-world`,
         skills: [`Input`, `Output`, `Variables`]
     },

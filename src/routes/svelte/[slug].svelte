@@ -79,7 +79,7 @@
   </div>
 </section>
 <section class="section">
-  <p class="content">{project.description}</p>
+  <p class="content">{@html project.description}</p>
 
   <iframe title={project.title} src={project.src} />
 </section>
