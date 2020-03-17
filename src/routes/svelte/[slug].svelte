@@ -66,6 +66,14 @@
   <title>Svelte: {project.title}</title>
 </svelte:head>
 
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href=".">DigiTech</a></li>
+    <li><a href="svelte">Svelte</a></li>
+    <li class="is-active"><a href="svelte/{project.slug}">{project.title}</a></li>
+  </ul>
+</nav>
+
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container">
