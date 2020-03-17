@@ -76,6 +76,7 @@ const projects = [
                 <li>In the terminal in VS Code, type <code>npm install</code> and then <code>npm run dev</code>.</li>
                 <li>Check that your server is running by going to <code>https://localhost:3000</code>.</li>
                 <li>Write an app that will add the GST for any price that's typed in.</li>
+                <li>This line might help: <code>&lt;p&gt;Total Cost: {price * 1.15}&lt;/p&gt;</code></li>
                 <li>Test your app in your browser.</li>
                 <li>Commit your code with an appropriate message.</li>
             </ol>
