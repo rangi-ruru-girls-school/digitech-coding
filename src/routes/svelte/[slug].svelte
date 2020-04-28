@@ -15,6 +15,7 @@
 
 <script>
   export let project;
+  let showCode = false;
 
   const getTabColor = skill => {
     switch (skill) {
@@ -86,8 +87,29 @@
     </div>
   </div>
 </section>
+{#if project.progressValue}
+  <progress class="progress" value={project.progressValue} max={project.progressMax}>{project.progressValue / project.progressMax}%</progress>
+  <div class="level is-mobile">
+    <div class="level-left">
+      <div class="level-item">
+        <a class="button" href="svelte/{project.prev}">Prev</a>
+      </div>
+    </div>
+    <div class="level-right">
+      <div class="level-item">
+        <a class="button" href="svelte/{project.next}">Next</a>
+      </div>
+    </div>
+  </div>
+{/if}
 <section class="section">
   <p class="content">{@html project.description}</p>
 
-  <iframe title={project.title} src={project.src} />
+  <button class="button" on:click={ () => { showCode = !showCode; } }>
+    {showCode ? "Hide" : "Show"} Code
+  </button>
+
+  {#if showCode}
+    <iframe title={project.title} src={project.src} />
+  {/if}
 </section>

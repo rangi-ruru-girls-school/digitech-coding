@@ -142,7 +142,7 @@ if (2 &gt; number) {
     {
         title: `The Box`,
         slug: "the-box",
-        subtitle: `A lockable boc to keep your things safe!`,
+        subtitle: `A lockable box to keep your things safe!`,
         description: ``,
         src: `https://svelte.dev/repl/c9050bf469d444878fad3ca0b87742ae`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
@@ -161,7 +161,79 @@ if (2 &gt; number) {
         subtitle: `A responsive list of things to do.`,
         description: ``,
         src: `https://svelte.dev/repl/3adf801139d84132bcbdbbdffa89e4d5`,
-        skills: [`Input`, `Output`, `Variables`, `Loops`]
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Password Searcher v1`,
+        slug: "password-searcher-v1",
+        subtitle: `How fast does it find your password?`,
+        progressValue: 1,
+        progressMax: 6,
+        prev: null,
+        next: `password-searcher-v2`,
+        description: ``,
+        src: `https://svelte.dev/repl/196fbd965af0442d8e92c568eb155f00`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Password Searcher v2`,
+        slug: "password-searcher-v2",
+        subtitle: `How fast does it find your password?`,
+        progressValue: 2,
+        progressMax: 6,
+        prev: `password-searcher-v1`,
+        next: `password-searcher-v3`,
+        description: ``,
+        src: `https://svelte.dev/repl/f83b9c068b8d42cd9550f5b82defb8cc`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Password Searcher v3`,
+        slug: "password-searcher-v3",
+        subtitle: `How fast does it find your password?`,
+        progressValue: 3,
+        progressMax: 6,
+        prev: `password-searcher-v2`,
+        next: `password-searcher-v4`,
+        description: ``,
+        src: `https://svelte.dev/repl/9303d3300b50462e83ef45eecc190b09`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Password Searcher v4`,
+        slug: "password-searcher-v4",
+        subtitle: `How fast does it find your password?`,
+        progressValue: 4,
+        progressMax: 6,
+        prev: `password-searcher-v3`,
+        next: `password-searcher-v5`,
+        description: ``,
+        src: `https://svelte.dev/repl/3c273d0e459b41f288e0b375b0548f11`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Password Searcher v5`,
+        slug: "password-searcher-v5",
+        subtitle: `How fast does it find your password?`,
+        progressValue: 5,
+        progressMax: 6,
+        prev: `password-searcher-v4`,
+        next: `password-searcher-v6`,
+        description: ``,
+        src: `https://svelte.dev/repl/f11532a4bca44e1b98eb9b53969fa696`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Password Searcher v6`,
+        slug: "password-searcher-v6",
+        subtitle: `How fast does it find your password?`,
+        progressValue: 6,
+        progressMax: 6,
+        prev: `password-searcher-v5`,
+        next: null,
+        description: ``,
+        src: `https://svelte.dev/repl/07c1672bb7fc48b69a957e3f22d15748`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
     }
 ];
 
