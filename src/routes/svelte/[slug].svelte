@@ -55,7 +55,7 @@
   }
 
   iframe {
-    height: 450px;
+    height: 700px;
     width: 100%;
     margin-top: 15px;
     display: block;

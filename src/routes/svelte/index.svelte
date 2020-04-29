@@ -1,21 +1,16 @@
-<script context="module">
-	export function preload({ params, query }) {
-		return this.fetch(`svelte.json`).then(r => r.json()).then(projects => {
-			return { projects };
-		});
-	}
-</script>
-
-<script>
-	export let projects;
-</script>
-
 <style>
-
+  a {
+    text-align: center;
+  }
+	
+	span {
+		display: block;
+		margin-top: 10px;
+	}
 </style>
 
 <svelte:head>
-	<title>Svelte</title>
+  <title>Svelte</title>
 </svelte:head>
 
 <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -34,11 +29,48 @@
   </div>
 </section>
 <section class="section">
-  <ul>
-    {#each projects as project}
-      <li>
-        <a rel='prefetch' href='svelte/{project.slug}'>{project.title}</a>
-      </li>
-    {/each}
-  </ul>
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/hello-world">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>Hello World</span>
+      </a>
+    </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/the-repeater">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>The Repeater</span>
+      </a>
+    </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/hot-chocolate">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>Hot Chocolate</span>
+      </a>
+    </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/the-box">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>The Box</span>
+      </a>
+    </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/hipster-ipsum">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>Hipster Ipsum</span>
+      </a>
+    </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/hipster-ipsum">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>To-do List</span>
+      </a>
+    </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/password-searcher-v1">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>Password Searcher</span>
+      </a>
+    </div>
+  </div>
 </section>

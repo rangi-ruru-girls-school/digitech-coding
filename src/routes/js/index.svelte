@@ -1,5 +1,3 @@
-
-
 <style>
   a {
     text-align: center;
