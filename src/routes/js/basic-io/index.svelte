@@ -12,6 +12,17 @@
   export let projects;
 </script>
 
+<style>
+  a {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
+
 <svelte:head>
   <title>Javascript: Basic I/O</title>
 </svelte:head>
@@ -33,11 +44,14 @@
   </div>
 </section>
 <section class="section">
-  <ul>
-    {#each projects as project}
-      <li>
-        <a rel="prefetch" href="js/basic-io/{project.slug}">{project.title}</a>
-      </li>
-    {/each}
-  </ul>
+<div class="tile is-ancestor">
+  {#each projects as project}
+    <div class="tile is-parent">
+        <a class="tile is-child box" href="js/basic-io/{project.slug}" rel="prefetch">
+          <i class="fas fa-hourglass-half fa-3x" />
+          <span>{project.title}</span>
+        </a>
+    </div>
+  {/each}
+  </div>
 </section>

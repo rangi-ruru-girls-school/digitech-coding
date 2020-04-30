@@ -15,6 +15,7 @@
 
 <script>
   export let project;
+  let showCode = false;
 
   const getTabColor = skill => {
     switch (skill) {
@@ -87,8 +88,41 @@
     </div>
   </div>
 </section>
-<section class="section">
-  <p class="content">Something about the project.</p>
 
-  <iframe title={project.title} src={project.src} />
+{#if project.progressValue}
+  <progress class="progress" value={project.progressValue} max={project.progressMax}>{project.progressValue / project.progressMax}%</progress>
+  <div class="level is-mobile">
+    <div class="level-left">
+      <div class="level-item">
+        {#if project.prev}
+          <a class="button" href="js/basic-io/{project.prev}">Prev</a>
+        {:else}
+          <a class="button" disabled>Prev</a>
+        {/if}
+      </div>
+    </div>
+    <div class="level-right">
+      <div class="level-item">
+        {#if project.next}
+          <a class="button" href="js/basic-io/{project.next}">Next</a>
+        {:else}
+          <a class="button" disabled>Next</a>
+        {/if}
+      </div>
+    </div>
+  </div>
+{/if}
+
+<section class="section">
+  <iframe title={project.title} width="980" height="551" src="{project.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <p class="content">{@html project.description}</p>
+
+  <button class="button" on:click={ () => { showCode = !showCode; } }>
+    {showCode ? "Hide" : "Show"} Code
+  </button>
+
+  {#if showCode}
+    <iframe title={project.title} src={project.src} />
+  {/if}
 </section>

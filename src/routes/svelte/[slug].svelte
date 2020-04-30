@@ -87,6 +87,7 @@
     </div>
   </div>
 </section>
+
 {#if project.progressValue}
   <progress class="progress" value={project.progressValue} max={project.progressMax}>{project.progressValue / project.progressMax}%</progress>
   <div class="level is-mobile">
@@ -102,6 +103,7 @@
     </div>
   </div>
 {/if}
+
 <section class="section">
   <p class="content">{@html project.description}</p>
 
