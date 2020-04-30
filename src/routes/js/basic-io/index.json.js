@@ -3,7 +3,8 @@ import projects from './_projects.js';
 const contents = JSON.stringify(projects.map(project => {
 	return {
 		title: project.title,
-		slug: project.slug
+		slug: project.slug,
+		icon: project.icon
 	};
 }));
 

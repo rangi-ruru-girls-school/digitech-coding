@@ -95,18 +95,35 @@
     <div class="level-left">
       <div class="level-item">
         {#if project.prev}
-          <a class="button" href="js/basic-io/{project.prev}">Prev</a>
+          <a class="button" href="js/basic-io/{project.prev}">
+            <i class="fas fa-caret-left fa-2x"></i>
+            &nbsp;
+            Prev
+          </a>
         {:else}
-          <a class="button" disabled>Prev</a>
+          <a class="button" disabled>
+            <i class="fas fa-caret-left fa-2x"></i>
+            &nbsp;
+            Prev
+          </a>
         {/if}
       </div>
     </div>
     <div class="level-right">
       <div class="level-item">
         {#if project.next}
-          <a class="button" href="js/basic-io/{project.next}">Next</a>
+          <a class="button" href="js/basic-io/{project.next}">
+            Next
+            &nbsp;
+            <i class="fas fa-caret-right fa-2x"></i>
+          </a>
         {:else}
-          <a class="button" disabled>Next</a>
+          <a class="button" disabled>
+            Next
+            &nbsp;
+            <i class="fas fa-caret-right fa-2x"></i>
+          </a>
+          
         {/if}
       </div>
     </div>
@@ -114,7 +131,7 @@
 {/if}
 
 <section class="section">
-  <iframe title={project.title} width="980" height="551" src="{project.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe title={project.title} src="{project.video}" allowfullscreen></iframe>
 
   <p class="content">{@html project.description}</p>
 
@@ -123,6 +140,6 @@
   </button>
 
   {#if showCode}
-    <iframe title={project.title} src={project.src} />
+    <iframe title={project.title} src={project.code} />
   {/if}
 </section>

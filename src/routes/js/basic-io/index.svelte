@@ -48,7 +48,7 @@
   {#each projects as project}
     <div class="tile is-parent">
         <a class="tile is-child box" href="js/basic-io/{project.slug}" rel="prefetch">
-          <i class="fas fa-hourglass-half fa-3x" />
+          <i class="{project.icon} fa-3x" />
           <span>{project.title}</span>
         </a>
     </div>
