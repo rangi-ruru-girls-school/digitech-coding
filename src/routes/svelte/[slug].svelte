@@ -14,10 +14,10 @@
 </script>
 
 <script>
-  import Hero from '../../../components/Hero.svelte'
-  import ProgressBar from '../../../components/ProgressBar.svelte'
-  import Video from '../../../components/Video.svelte'
-  import Code from '../../../components/Code.svelte'
+  import Hero from '../../components/Hero.svelte'
+  import ProgressBar from '../../components/ProgressBar.svelte'
+  import Video from '../../components/Video.svelte'
+  import Code from '../../components/Code.svelte'
 
   export let project;
 </script>
