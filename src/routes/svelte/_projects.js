@@ -21,10 +21,8 @@ const projects = [
   <div class="tile is-parent">
     <div class="tile is-child box">
       <h3>HTML & JavaScript (jQuery)</h3>
-      <pre><code>&lt;!-- HTML --&gt;
-&lt;h3&gt;Hello &lt;span id="txtName"&gt;&lt;/span&gt;!&lt;/h3&gt;</code></pre>
-      <pre><code>// JavaScript (jQuery)
-$('#txtName').text('world')</code></pre>
+      <pre><code>&lt;h3&gt;Hello &lt;span id="txtName"&gt;&lt;/span&gt;!&lt;/h3&gt;</code></pre>
+      <pre><code>$('#txtName').text('world')</code></pre>
     </div>
   </div>
   <div class="tile is-parent">
@@ -76,8 +74,7 @@ $('#txtName').text('world')</code></pre>
             <div class="tile is-parent">
               <div class="tile is-child box">
                 <h3>HTML & JavaScript (jQuery)</h3>
-          <pre><code>&lt;!-- HTML --&gt;
-&lt;label&gt;
+          <pre><code>&lt;label&gt;
   Write something:
   &lt;input id="txtInput" type="text"&gt;
 &lt;/label&gt;
@@ -85,8 +82,7 @@ $('#txtName').text('world')</code></pre>
 &lt;button id="btnRepeat"&gt;Repeat&lt;/button&gt;
 
 &lt;p id="txtOutput"&gt;&lt;/p&gt;</code></pre>
-          <pre><code>// JavaScript (jQuery)
-$('#btnRepeat').click( () => &lbrace;
+          <pre><code>$('#btnRepeat').click( () => &lbrace;
   let text = $('#txtInput').val()
   $('#txtOutput').text('You wrote: ' + text)
 &rbrace;)</code></pre>
@@ -151,8 +147,7 @@ $('#btnRepeat').click( () => &lbrace;
           <div class="tile is-parent">
             <div class="tile is-child box">
               <h3>HTML & JavaScript (jQuery)</h3>
-              <pre><code>&lt;!-- HTML --&gt;
-&lt;label&gt;
+              <pre><code>&lt;label&gt;
   Number:
   &lt;input id="numInput" type="number"&gt;
 &lt;/label&gt;
@@ -160,8 +155,7 @@ $('#btnRepeat').click( () => &lbrace;
 &lt;button id="btnCheck"&gt;Check&lt;/button&gt;
 
 &lt;p id="txtResult"&gt;&lt;/p&gt;</code></pre>
-              <pre><code>// JavaScript (jQuery)
-$('#btnCheck').click( ()=> &lbrace;
+              <pre><code>$('#btnCheck').click( ()=> &lbrace;
   let input = $('#numInput').val()
   let number = Number(input)
 
