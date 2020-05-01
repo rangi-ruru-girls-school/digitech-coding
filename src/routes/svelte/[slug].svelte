@@ -14,54 +14,13 @@
 </script>
 
 <script>
+  import Hero from '../../Components/Hero.svelte'
+  import ProgressBar from '../../Components/ProgressBar.svelte'
+  import Video from '../../Components/Video.svelte'
+  import Code from '../../Components/Code.svelte'
+
   export let project;
-  let showCode = false;
-
-  const getTabColor = skill => {
-    switch (skill) {
-      case `Input`:
-        return `is-info`;
-        break;
-      case `Output`:
-        return `is-link`;
-        break;
-      case `Variables`:
-        return `is-primary`;
-        break;
-      case `Arrays`:
-        return `is-dark`;
-        break;
-      case `Objects`:
-        return `is-light`;
-        break;
-      case `If Statements`:
-        return `is-success`;
-        break;
-      case `Loops`:
-        return `is-warning`;
-        break;
-      case `Components`:
-        return `is-danger`;
-        break;
-      default:
-        return;
-    }
-  };
 </script>
-
-<style>
-  .tag {
-    margin-right: 5px;
-  }
-
-  iframe {
-    height: 700px;
-    width: 100%;
-    margin-top: 15px;
-    display: block;
-    border-top: 1px solid black;
-  }
-</style>
 
 <svelte:head>
   <title>Svelte: {project.title}</title>
@@ -75,43 +34,18 @@
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">{project.title}</h1>
-      <h2 class="subtitle">{project.subtitle}</h2>
-      <span class="">Skills:</span>
-      {#each project.skills as skill}
-        <span class="tag {getTabColor(skill)}">{skill}</span>
-      {/each}
-    </div>
-  </div>
-</section>
+<Hero title={project.title} subtitle={project.subtitle} skills={project.skills} />
 
 {#if project.progressValue}
-  <progress class="progress" value={project.progressValue} max={project.progressMax}>{project.progressValue / project.progressMax}%</progress>
-  <div class="level is-mobile">
-    <div class="level-left">
-      <div class="level-item">
-        <a class="button" href="svelte/{project.prev}">Prev</a>
-      </div>
-    </div>
-    <div class="level-right">
-      <div class="level-item">
-        <a class="button" href="svelte/{project.next}">Next</a>
-      </div>
-    </div>
-  </div>
+  <ProgressBar value={project.progressValue} max={project.progressMax} prev="svelte/{project.prev}" next="svelte/{project.next}" />
 {/if}
 
 <section class="section">
+  {#if project.video}
+    <Video title={project.title} src="{project.video}" />
+  {/if}
+
   <p class="content">{@html project.description}</p>
 
-  <button class="button" on:click={ () => { showCode = !showCode; } }>
-    {showCode ? "Hide" : "Show"} Code
-  </button>
-
-  {#if showCode}
-    <iframe title={project.title} src={project.src} />
-  {/if}
+  <Code title={project.title} src={project.code} />
 </section>

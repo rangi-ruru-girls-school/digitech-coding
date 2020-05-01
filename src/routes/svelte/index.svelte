@@ -1,3 +1,7 @@
+<script>
+  import Hero from '../../Components/Hero.svelte'
+</script>
+
 <style>
   a {
     text-align: center;
@@ -20,14 +24,8 @@
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Svelte</h1>
-      <h2 class="subtitle">A flexible and lightweight framework for creating responsive web apps.</h2>
-    </div>
-  </div>
-</section>
+<Hero title="Svelte" subtitle="A flexible and lightweight framework for creating responsive web apps." />
+
 <section class="section">
   <div class="tile is-ancestor">
     <div class="tile is-parent">

@@ -9,6 +9,8 @@
 </script>
 
 <script>
+  import Hero from '../../../Components/Hero.svelte'
+
   export let projects;
 </script>
 
@@ -35,23 +37,17 @@
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Basic Input/Output</h1>
-      <h2 class="subtitle">How to get information from the page and put information on it.</h2>
-    </div>
-  </div>
-</section>
+<Hero title="Basic Input/Output" subtitle="How to get information from the page and put information on it." />
+
 <section class="section">
-<div class="tile is-ancestor">
-  {#each projects as project}
-    <div class="tile is-parent">
-        <a class="tile is-child box" href="js/basic-io/{project.slug}" rel="prefetch">
-          <i class="{project.icon} fa-3x" />
-          <span>{project.title}</span>
-        </a>
-    </div>
-  {/each}
+  <div class="tile is-ancestor">
+    {#each projects as project}
+      <div class="tile is-parent">
+          <a class="tile is-child box" href="js/basic-io/{project.slug}" rel="prefetch">
+            <i class="{project.icon} fa-3x" />
+            <span>{project.title}</span>
+          </a>
+      </div>
+    {/each}
   </div>
 </section>

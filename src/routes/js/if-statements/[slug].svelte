@@ -14,53 +14,13 @@
 </script>
 
 <script>
-  export let project;
-
-  const getTabColor = skill => {
-    switch (skill) {
-      case `Input`:
-        return `is-info`;
-        break;
-      case `Output`:
-        return `is-link`;
-        break;
-      case `Variables`:
-        return `is-primary`;
-        break;
-      case `Arrays`:
-        return `is-dark`;
-        break;
-      case `Objects`:
-        return `is-light`;
-        break;
-      case `If Statements`:
-        return `is-success`;
-        break;
-      case `Loops`:
-        return `is-warning`;
-        break;
-      case `Components`:
-        return `is-danger`;
-        break;
-      default:
-        return;
-    }
-  };
+  import Hero from '../../../Components/Hero.svelte'
+  import ProgressBar from '../../../Components/ProgressBar.svelte'
+  import Video from '../../../Components/Video.svelte'
+  import Code from '../../../Components/Code.svelte'
+  
+  export let project
 </script>
-
-<style>
-  .tag {
-    margin-right: 5px;
-  }
-
-  iframe {
-    height: 450px;
-    width: 100%;
-    margin-top: 15px;
-    display: block;
-    border-top: 1px solid black;
-  }
-</style>
 
 <svelte:head>
   <title>JavaScript: {project.title}</title>
@@ -75,20 +35,18 @@
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">{project.title}</h1>
-      <h2 class="subtitle">{project.subtitle}</h2>
-      <span class="">Skills:</span>
-      {#each project.skills as skill}
-        <span class="tag {getTabColor(skill)}">{skill}</span>
-      {/each}
-    </div>
-  </div>
-</section>
-<section class="section">
-  <p class="content">Something about the project.</p>
+<Hero title={project.title} subtitle={project.subtitle} skills={project.skills} />
 
-  <iframe title={project.title} src={project.src} />
+{#if project.progressValue}
+  <ProgressBar value={project.progressValue} max={project.progressMax} prev="js/if-statements/{project.prev}" next="js/if-statements/{project.next}" />
+{/if}
+
+<section class="section">
+  {#if project.video}
+    <Video title={project.title} src="{project.video}" />
+  {/if}
+
+  <p class="content">{@html project.description}</p>
+
+  <Code title={project.title} src={project.code} />
 </section>
