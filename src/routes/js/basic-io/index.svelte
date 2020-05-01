@@ -9,7 +9,7 @@
 </script>
 
 <script>
-  import Hero from '../../../Components/Hero.svelte'
+  import Hero from '../../../components/Hero.svelte'
 
   export let projects;
 </script>
