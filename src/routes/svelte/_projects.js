@@ -34,7 +34,7 @@ $('#txtName').text('world')</code></pre>
   let name = 'world'
 &lt;/script&gt;
 
-&lt;h3&gt;Hello {name}!&lt;/h3&gt;</code></pre>
+&lt;h3&gt;Hello &lbrace;name&rbrace;!&lt;/h3&gt;</code></pre>
     </div>
   </div>
 </div>
@@ -66,9 +66,9 @@ $('#txtName').text('world')</code></pre>
         video: `https://www.youtube.com/embed/lzHG__fFO0Q`,
         description: `
         <p>This project introduces how you can get information from the web page (and the user) to use in your JavaScript.</p>
-        <p>As with the previous project, you'll use some Svelte-specific code in curly braces <code>{ }</code>.</p>
+        <p>As with the previous project, you'll use some Svelte-specific code in curly braces <code>&lbrace; &rbrace;</code>.</p>
         <p>Specifically, we'll use the <a
-            href="https://svelte.dev/docs#bind_element_property"><code>bind:value={variableName}</code></a> to connect the input
+            href="https://svelte.dev/docs#bind_element_property"><code>bind:value=&lbrace;variableName&rbrace;</code></a> to connect the input
           in the HTML to a variable in the JavaScript.</p>
          
           <p>Let's compare the jQuery version of The Repeater with the Svelte version.</p>
@@ -86,10 +86,10 @@ $('#txtName').text('world')</code></pre>
 
 &lt;p id="txtOutput"&gt;&lt;/p&gt;</code></pre>
           <pre><code>// JavaScript (jQuery)
-$('#btnRepeat').click( () => {
+$('#btnRepeat').click( () => &lbrace;
   let text = $('#txtInput').val()
   $('#txtOutput').text('You wrote: ' + text)
-})</code></pre>
+&rbrace;)</code></pre>
               </div>
             </div>
             <div class="tile is-parent">
@@ -101,10 +101,10 @@ $('#btnRepeat').click( () => {
 
 &lt;label&gt;
    Write something:
-  &lt;input bind:value={text}&gt;
+  &lt;input bind:value=&lbrace;text&rbrace;&gt;
 &lt;/label&gt;
 
-&lt;p&gt;You wrote: {text}&lt;/p&gt;</code></pre>
+&lt;p&gt;You wrote: &lbrace;text&rbrace;&lt;/p&gt;</code></pre>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ $('#btnRepeat').click( () => {
           <li>In the terminal in VS Code, type <code>npm install</code> and then <code>npm run dev</code>.</li>
           <li>Check that your server is running by going to <code>https://localhost:3000</code>.</li>
           <li>Write an app that will add the GST for any price that's typed in.</li>
-          <li>This line might help: <code>&lt;p&gt;Total Cost: {price * 1.15}&lt;/p&gt;</code></li>
+          <li>This line might help: <code>&lt;p&gt;Total Cost: &lbrace;price * 1.15&rbrace;&lt;/p&gt;</code></li>
           <li>Test your app in your browser.</li>
           <li>Commit your code with an appropriate message.</li>
         </ol>
@@ -141,9 +141,9 @@ $('#btnRepeat').click( () => {
         <p>This project introduces Svelte-specific if statements <em>inside</em> your HTML.</p>
         <p>You can still write normal if statements inside the <code>&lt;script&gt;&lt;/script&gt;</code> tags, but you won't
           have to as often.</p>
-        <p>As with the previous projects, you'll use some Svelte-specific code in curly braces <code>{}</code>.</p>
-        <p>Specifically, we'll use the <a style="color: inherit;" href="https://svelte.dev/docs#if"><code>{#if}</code>,
-            <code>{:else if}</code>, <code>{:else}</code>, and <code>{/if}</code></a> to decide what HTML to have on the page.
+        <p>As with the previous projects, you'll use some Svelte-specific code in curly braces <code>&lbrace; &rbrace;</code>.</p>
+        <p>Specifically, we'll use the <a style="color: inherit;" href="https://svelte.dev/docs#if"><code>&lbrace;#if&rbrace;</code>,
+            <code>&lbrace;:else if&rbrace;</code>, <code>&lbrace;:else&rbrace;</code>, and <code>&lbrace;/if&rbrace;</code></a> to decide what HTML to have on the page.
         </p>
         <p>Our demo is going to be a simple app that tells you if the variable is less, more, or equal to 2.</p>
         <p>Let's compare the jQuery version of Is It More Than 2? with the Svelte version.</p>
@@ -161,22 +161,22 @@ $('#btnRepeat').click( () => {
 
 &lt;p id="txtResult"&gt;&lt;/p&gt;</code></pre>
               <pre><code>// JavaScript (jQuery)
-$('#btnCheck').click( ()=> {
+$('#btnCheck').click( ()=> &lbrace;
   let input = $('#numInput').val()
   let number = Number(input)
 
   let result = ''
 
-  if (number < 2) {
+  if (number < 2) &lbrace;
       result = number + ' is less than 2.'
-  } else if (number > 2) {
+  &rbrace; else if (number > 2) &lbrace;
       result = number + ' is more than 2.'
-  } else {
+  &rbrace; else &lbrace;
       result = number + ' is 2.'
-  }
+  &rbrace;
 
   $('#txtResult').text(result)
-})</code></pre>
+&rbrace;)</code></pre>
             </div>
           </div>
           <div class="tile is-parent">
@@ -188,16 +188,16 @@ $('#btnCheck').click( ()=> {
 
 &lt;label&gt;
   Number:
-  &lt;input type="number" bind:value={number}&gt;
+  &lt;input type="number" bind:value=&lbrace;number&rbrace;&gt;
 &lt;/label&gt;
 
-{#if number &lt; 2}
-  &lt;p&gt;{number} is less than 2.&lt;/p&gt;
-{:else if number &gt; 2}
-  &lt;p&gt;{number} is more than 2.&lt;/p&gt;
-{:else}
-  &lt;p&gt;{number} is 2.&lt;/p&gt;
-{/if}</code></pre>
+&lbrace;#if number &lt; 2&rbrace;
+  &lt;p&gt;&lbrace;number&rbrace; is less than 2.&lt;/p&gt;
+&lbrace;:else if number &gt; 2&rbrace;
+  &lt;p&gt;&lbrace;number&rbrace; is more than 2.&lt;/p&gt;
+&lbrace;:else&rbrace;
+  &lt;p&gt;&lbrace;number&rbrace; is 2.&lt;/p&gt;
+&lbrace;/if&rbrace;</code></pre>
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ $('#btnCheck').click( ()=> {
           <li>In the terminal in VS Code, type <code>npm install</code> and then <code>npm run dev</code>.</li>
           <li>Check that your server is running by going to <code>https://localhost:3000</code>.</li>
           <li>Write an app that will take in a hot chocolate's temperature and tell you if it's tepid, good, or too hot.</li>
-          <li>This line might help: <code>&lt;input type="range" min="0" max="100" bind:value={temp}&gt;</code></li>
+          <li>This line might help: <code>&lt;input type="range" min="0" max="100" bind:value=&lbrace;temp&rbrace;&gt;</code></li>
           <li><em>There's an exemplar below - try to avoid looking at it unless you get really stuck.</em></li>
           <li>Test your app in your browser.</li>
           <li>Commit your code with an appropriate message.</li>
