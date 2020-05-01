@@ -55,7 +55,7 @@ const projects = [
 
         You'll need to use all of the skills to write the code. Here's some references to help:
         <ul>
-          <li><a href=https://www.w3schools.com/js/js_variables.asp">variables</a></li>
+          <li><a href="https://www.w3schools.com/js/js_variables.asp">variables</a></li>
           <li><a href="https://www.w3schools.com/jquery/event_click.asp">.click( )</a></li>
           <li><a href="https://www.w3schools.com/jquery/html_val.asp">.val( )</a></li>
           <li><a href="https://www.w3schools.com/jquery/html_text.asp">.text( )</a></li>
