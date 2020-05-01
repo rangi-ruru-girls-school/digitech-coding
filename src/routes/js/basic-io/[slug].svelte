@@ -131,7 +131,9 @@
 {/if}
 
 <section class="section">
-  <iframe title={project.title} src="{project.video}" allowfullscreen></iframe>
+  {#if project.video}
+    <iframe title={project.title} src="{project.video}" allowfullscreen></iframe>
+  {/if}
 
   <p class="content">{@html project.description}</p>
 
