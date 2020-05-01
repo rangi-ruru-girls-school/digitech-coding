@@ -167,9 +167,9 @@ $('#btnCheck').click( ()=> &lbrace;
 
   let result = ''
 
-  if (number < 2) &lbrace;
+  if (number &lt; 2) &lbrace;
       result = number + ' is less than 2.'
-  &rbrace; else if (number > 2) &lbrace;
+  &rbrace; else if (number &gt; 2) &lbrace;
       result = number + ' is more than 2.'
   &rbrace; else &lbrace;
       result = number + ' is 2.'
