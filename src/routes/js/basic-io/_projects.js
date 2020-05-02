@@ -50,7 +50,7 @@ const projects = [
         progressMax: 4,
         prev: `the-repeater`,
         next: null,
-        video: null,
+        video: `https://demo-madlibs.netlify.app/`,
         description: `<p>This project is a chance for you to practice the skills you learnt in the previous three projects.</p>
 
         You'll need to use all of the skills to write the code. Here's some references to help:
