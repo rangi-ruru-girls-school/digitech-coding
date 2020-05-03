@@ -50,7 +50,7 @@ const projects = [
         progressMax: 4,
         prev: `options`,
         next: null,
-        video: ``,
+        video: `https://demo-calculator.netlify.app`,
         description: ``,
         code: `https://codepen.io/MrHullen/embed/dyypqmL?height=265&theme-id=light&default-tab=html,result&editable=true`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
