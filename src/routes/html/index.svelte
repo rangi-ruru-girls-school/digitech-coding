@@ -37,7 +37,7 @@
   </ul>
 </nav>
 
-<Hero title="HTML & CSS" subtitle="How to get information from the page and put information on it." />
+<Hero title="HTML & CSS" subtitle="How to write a website and style it." />
 
 <section class="section">
   <div class="tile is-ancestor">
