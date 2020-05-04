@@ -11,6 +11,7 @@
 <script>
   export let projects
 
+/*
   let cheatCode = []
   let unlock = false
 
@@ -27,7 +28,7 @@
       console.log(`Cheat code accepted!`)
       unlock = true
     }
-  }
+  }*/
 </script>
 
 <svelte:head>
@@ -59,12 +60,13 @@
         </li>
       {/if}
     {/each}
+    <!--
     {#if unlock}
       <li>
           <a rel="prefetch" href="js/loops/{projects[projects.length - 1].slug}">
             {projects[projects.length - 1].title}
           </a>
       </li>
-    {/if}
+    {/if}-->
   </ul>
 </section>
