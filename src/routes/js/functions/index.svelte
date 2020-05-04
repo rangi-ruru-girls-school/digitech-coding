@@ -13,14 +13,14 @@
 </script>
 
 <svelte:head>
-  <title>Javascript: Arrays</title>
+  <title>Javascript: Functions</title>
 </svelte:head>
 
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
     <li><a href="js">JavaScript and jQuery</a></li>
-    <li class="is-active"><a href="js/basic-io">Functions</a></li>
+    <li class="is-active"><a href="js/functions">Functions</a></li>
   </ul>
 </nav>
 
@@ -32,12 +32,7 @@
     </div>
   </div>
 </section>
+
 <section class="section">
-  <ul>
-    {#each projects as project}
-      <li>
-        <a rel="prefetch" href="js/functions/{project.slug}">{project.title}</a>
-      </li>
-    {/each}
-  </ul>
+  <p>Coming soon...</p>
 </section>

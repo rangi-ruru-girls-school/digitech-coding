@@ -54,6 +54,20 @@ const projects = [
         description: ``,
         code: `https://codepen.io/MrHullen/embed/dyypqmL?height=265&theme-id=light&default-tab=html,result&editable=true`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
+    },
+    {
+        title: `Extra`,
+        slug: ``,
+        icon: ``,
+        subtitle: ``,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: ``,
+        code: null,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
     }
 ];
 

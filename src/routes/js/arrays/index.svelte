@@ -28,16 +28,10 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Arrays</h1>
-      <h2 class="subtitle">Probably programming's most common data structure.</h2>
+      <h2 class="subtitle">Probably programming's most versatile data structure.</h2>
     </div>
   </div>
 </section>
 <section class="section">
-  <ul>
-    {#each projects as project}
-      <li>
-        <a rel="prefetch" href="js/arrays/{project.slug}">{project.title}</a>
-      </li>
-    {/each}
-  </ul>
+  <p>Coming soon...</p>
 </section>

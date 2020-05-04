@@ -73,6 +73,20 @@ const projects = [
         <p>Use the code below to get you started. Copy and paste the HTML and JavaScript into your own files. You do not need to write any more HTML to complete this project.</p>`,
         code: `https://codepen.io/MrHullen/embed/mdeBPNg?height=265&theme-id=light&default-tab=html,result&editable=true`,
         skills: [`Input`, `Output`, `Variables`]
+    },
+    {
+        title: `Remaining Years`,
+        slug: `remaining-years`,
+        icon: `fas fa-book-dead`,
+        subtitle: `This fortune telling program will tell you how long you have left.`,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: `<p>Use the code starter below to write your program.</p>`,
+        code: `https://codepen.io/MrHullen/embed/KKKgBdL?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`]
     }
 ];
 

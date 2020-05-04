@@ -29,7 +29,7 @@
         rel="prefetch"
         href="html">
         <i class="fas fa-code" />
-        <span>HTML5 and CSS3</span>
+        <span>HTML and CSS</span>
       </a>
       <a
         class="navbar-item"

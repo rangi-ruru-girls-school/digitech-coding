@@ -20,7 +20,7 @@
   <ul>
     <li><a href=".">DigiTech</a></li>
     <li><a href="js">JavaScript and jQuery</a></li>
-    <li class="is-active"><a href="js/basic-io">Objects</a></li>
+    <li class="is-active"><a href="js/objects">Objects</a></li>
   </ul>
 </nav>
 
@@ -32,12 +32,7 @@
     </div>
   </div>
 </section>
+
 <section class="section">
-  <ul>
-    {#each projects as project}
-      <li>
-        <a rel="prefetch" href="js/objects/{project.slug}">{project.title}</a>
-      </li>
-    {/each}
-  </ul>
+  <p>Coming soon...</p>
 </section>

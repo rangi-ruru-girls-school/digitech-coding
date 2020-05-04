@@ -32,8 +32,7 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
-    <li><a href="html">HTML</a></li>
-    <li class="is-active"><a href="js/basic-io">Basic I/O</a></li>
+    <li class="is-active"><a href="html">HTML</a></li>
   </ul>
 </nav>
 
