@@ -12,24 +12,6 @@
   import Hero from '../../../components/Hero.svelte'
 
   export let projects
-
-  let cheatCode = []
-  let unlock = false
-
-  document.onkeypress = function(event) {
-    event = event || window.event;
-    let charCode = typeof event.which == 'number' ? event.which : event.keyCode
-    if (charCode) {
-      if (cheatCode.length > 4) {
-        [, ...cheatCode] = cheatCode
-      }
-      cheatCode = [...cheatCode, String.fromCharCode(charCode)]
-    }
-    if (cheatCode.toString() === 'i,d,d,q,d') {
-      console.log(`Cheat code accepted!`)
-      unlock = true
-    }
-  }
 </script>
 
 <style>
@@ -69,13 +51,5 @@
         </div>
       {/if}
     {/each}
-    {#if unlock}
-      <div class="tile is-parent">
-          <a class="tile is-child box" href="js/if-statements/{projects[projects.length - 1].slug}" rel="prefetch">
-            <i class="{projects[projects.length - 1].icon} fa-3x" />
-            <span>{projects[projects.length - 1].title}</span>
-          </a>
-      </div>
-    {/if}
   </div>
 </section>

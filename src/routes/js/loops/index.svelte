@@ -10,31 +10,6 @@
 
 <script>
   export let projects
-
-  let cheatCode = []
-  let unlock = false
-
-  document.onkeydown = function (e) {
-    let charCode
-
-
-    if (typeof event !== 'undefined') {
-      charCode = event.keyCode
-    }
-    else if (e) {
-      charCode = e.which
-    }
-
-    if (cheatCode.length > 4) {
-      [, ...cheatCode] = cheatCode
-    }
-    cheatCode = [...cheatCode, String.fromCharCode(charCode)];
-    console.log(`Cheat code: ${cheatCode.toString()}`)
-    if (cheatCode.toString() === 'I,D,D,Q,D') {
-      console.log(`Cheat code accepted!`)
-      unlock = true;
-    }
-  }
 </script>
 
 <svelte:head>
@@ -66,12 +41,5 @@
         </li>
       {/if}
     {/each}
-    {#if unlock}
-      <li>
-          <a rel="prefetch" href="js/loops/{projects[projects.length - 1].slug}">
-            {projects[projects.length - 1].title}
-          </a>
-      </li>
-    {/if}
   </ul>
 </section>
