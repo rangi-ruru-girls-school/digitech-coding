@@ -14,17 +14,24 @@
   let cheatCode = []
   let unlock = false
 
-  document.onkeypress = function(event) {
-    event = event || window.event;
-    let charCode = typeof event.which == 'number' ? event.which : event.keyCode;
-    if (charCode) {
-      if (cheatCode.length > 4) {
-        [, ...cheatCode] = cheatCode;
-      }
-      cheatCode = [...cheatCode, String.fromCharCode(charCode)];
+  document.onkeydown = function (e) {
+    let charCode
+
+
+    if (typeof event !== 'undefined') {
+      charCode = event.keyCode
     }
-    if (cheatCode.toString() === 'i,d,d,q,d') {
-      console.log(`Cheat code accepted!`);
+    else if (e) {
+      charCode = e.which
+    }
+
+    if (cheatCode.length > 4) {
+      [, ...cheatCode] = cheatCode
+    }
+    cheatCode = [...cheatCode, String.fromCharCode(charCode)];
+    console.log(`Cheat code: ${cheatCode.toString()}`)
+    if (cheatCode.toString() === 'I,D,D,Q,D') {
+      console.log(`Cheat code accepted!`)
       unlock = true;
     }
   }
