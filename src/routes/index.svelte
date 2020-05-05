@@ -21,7 +21,7 @@
   <div class="tile is-parent">
     <a class="tile is-child box" href="html">
       <i class="fa-10x fas fa-code" />
-      <span>HTML5 and CSS3</span>
+      <span>HTML and CSS</span>
     </a>
   </div>
   <div class="tile is-parent">

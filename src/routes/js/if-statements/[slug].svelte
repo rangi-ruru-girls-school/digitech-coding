@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-  <title>JavaScript: {project.title}</title>
+  <title>{project.title}</title>
 </svelte:head>
 
 <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -31,7 +31,7 @@
     <li><a href=".">DigiTech</a></li>
     <li><a href="js">JavaScript and jQuery</a></li>
     <li><a href="js/if-statements">If Statements</a></li>
-    <li class="is-active"><a href="js/{project.slug}">{project.title}</a></li>
+    <li class="is-active"><a href="js/if-statements/{project.slug}">{project.title}</a></li>
   </ul>
 </nav>
 

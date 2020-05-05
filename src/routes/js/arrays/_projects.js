@@ -1,24 +1,73 @@
 const projects = [
     {
-        title: `Weekday List`,
-        slug: "weekday-list",
-        subtitle: `A simple list of the days of the week.`,
-        src: `https://codepen.io/MrHullen/embed/pooOLar?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
+        title: `Future Job`,
+        slug: `future-job`,
+        icon: ``,
+        subtitle: `What could you be when you grow up?`,
+        progressValue: 1,
+        progressMax: 4,
+        prev: null,
+        next: `subject-list`,
+        video: null,
+        description: ``,
+        code: `https://codepen.io/MrHullen/embed/MWWbLBP?height=265&theme-id=light&default-tab=html,result`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
         title: `Subject List`,
-        slug: "subject-list",
-        subtitle: `Which subjects are you doing?`,
-        src: `https://codepen.io/MrHullen/embed/pooNGGO?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
+        slug: `subject-list`,
+        icon: ``,
+        subtitle: `Create your ideal subject list.`,
+        progressValue: 2,
+        progressMax: 4,
+        prev: `future-job`,
+        next: `list-the-weekdays`,
+        video: null,
+        description: ``,
+        code: `https://codepen.io/MrHullen/embed/pooNGGO?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+    },
+    {
+        title: `List the Weekdays`,
+        slug: `list-the-weekdays`,
+        icon: ``,
+        subtitle: `What order are the weekdays in again?`,
+        progressValue: 3,
+        progressMax: 4,
+        prev: `subject-list`,
+        next: `shopping-list`,
+        video: null,
+        description: ``,
+        code: `https://codepen.io/MrHullen/embed/pooOLar?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
         title: `Shopping List`,
-        slug: "shopping-list",
-        subtitle: `Add and remove items from a list.`,
-        src: `https://codepen.io/MrHullen/embed/LYYbqJE?height=265&theme-id=light&default-tab=html,result&editable=true`,
-        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
+        slug: `shopping-list`,
+        icon: ``,
+        subtitle: `Helps to prepare before you go.`,
+        progressValue: 4,
+        progressMax: 4,
+        prev: `list-the-weekdays`,
+        next: null,
+        video: null,
+        description: ``,
+        code: `https://codepen.io/MrHullen/embed/LYYbqJE?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+    },
+    {
+        title: `Extra`,
+        slug: `extra`,
+        icon: ``,
+        subtitle: ``,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: ``,
+        code: null,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
     }
 ];
 

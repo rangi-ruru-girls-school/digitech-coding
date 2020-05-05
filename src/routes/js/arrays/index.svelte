@@ -9,8 +9,21 @@
 </script>
 
 <script>
-  export let projects;
+  import Hero from '../../../components/Hero.svelte'
+
+  export let projects
 </script>
+
+<style>
+  a {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
 
 <svelte:head>
   <title>Javascript: Arrays</title>
@@ -24,14 +37,19 @@
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Arrays</h1>
-      <h2 class="subtitle">Probably programming's most versatile data structure.</h2>
-    </div>
-  </div>
-</section>
+<Hero title="Arrays" subtitle="Probably programming's most versatile data structure." />
+
 <section class="section">
-  <p>Coming soon...</p>
+  <div class="tile is-ancestor">
+    {#each projects as project, index}
+      {#if index != projects.length - 1}
+        <div class="tile is-parent">
+            <a class="tile is-child box" href="js/arrays/{project.slug}" rel="prefetch">
+              <i class="{project.icon} fa-3x" />
+              <span>{project.title}</span>
+            </a>
+        </div>
+      {/if}
+    {/each}
+  </div>
 </section>

@@ -9,8 +9,21 @@
 </script>
 
 <script>
+  import Hero from '../../../components/Hero.svelte'
+
   export let projects
 </script>
+
+<style>
+  a {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
 
 <svelte:head>
   <title>Javascript: Loops</title>
@@ -24,22 +37,19 @@
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Loops</h1>
-      <h2 class="subtitle">Utilise the computer's power to repeat the same task over and over.</h2>
-    </div>
-  </div>
-</section>
+<Hero title="Loops" subtitle="Utilise the computer's power to repeat the same task over and over." />
+
 <section class="section">
-  <ul>
+  <div class="tile is-ancestor">
     {#each projects as project, index}
       {#if index != projects.length - 1}
-        <li>
-          <a rel="prefetch" href="js/loops/{project.slug}">{project.title}</a>
-        </li>
+        <div class="tile is-parent">
+            <a class="tile is-child box" href="js/loops/{project.slug}" rel="prefetch">
+              <i class="{project.icon} fa-3x" />
+              <span>{project.title}</span>
+            </a>
+        </div>
       {/if}
     {/each}
-  </ul>
+  </div>
 </section>
