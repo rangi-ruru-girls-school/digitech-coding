@@ -2,7 +2,7 @@ const projects = [
     {
         title: `Future Job`,
         slug: `future-job`,
-        icon: ``,
+        icon: `fas fa-stethoscope`,
         subtitle: `What could you be when you grow up?`,
         progressValue: 1,
         progressMax: 4,
@@ -16,7 +16,7 @@ const projects = [
     {
         title: `Subject List`,
         slug: `subject-list`,
-        icon: ``,
+        icon: `fas fa-user-graduate`,
         subtitle: `Create your ideal subject list.`,
         progressValue: 2,
         progressMax: 4,
@@ -30,7 +30,7 @@ const projects = [
     {
         title: `List the Weekdays`,
         slug: `list-the-weekdays`,
-        icon: ``,
+        icon: `far fa-calendar-alt`,
         subtitle: `What order are the weekdays in again?`,
         progressValue: 3,
         progressMax: 4,
@@ -44,7 +44,7 @@ const projects = [
     {
         title: `Shopping List`,
         slug: `shopping-list`,
-        icon: ``,
+        icon: `fas fa-cart-plus`,
         subtitle: `Helps to prepare before you go.`,
         progressValue: 4,
         progressMax: 4,

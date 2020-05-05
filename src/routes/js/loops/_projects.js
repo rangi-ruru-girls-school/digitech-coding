@@ -2,7 +2,7 @@ const projects = [
     {
         title: `'ello 'ello 'ello`,
         slug: `ello-ello-ello`,
-        icon: ``,
+        icon: `fas fa-hard-hat`,
         subtitle: `The usual greeting from a steroetyping British police officer.`,
         progressValue: 1,
         progressMax: 4,
@@ -16,7 +16,7 @@ const projects = [
     {
         title: `Counting`,
         slug: `counting`,
-        icon: ``,
+        icon: `fas fa-sort-numeric-down`,
         subtitle: `Count up to a certain number.`,
         progressValue: 2,
         progressMax: 4,
@@ -30,7 +30,7 @@ const projects = [
     {
         title: `Factorial`,
         slug: `factorial`,
-        icon: ``,
+        icon: `fas fa-exclamation`,
         subtitle: `Multiply the all the numbers together up to a given number.`,
         progressValue: 3,
         progressMax: 4,
@@ -44,7 +44,7 @@ const projects = [
     {
         title: `Fibonacci`,
         slug: `fibonacci`,
-        icon: ``,
+        icon: `fas fa-signal`,
         subtitle: `The classic number series.`,
         progressValue: 4,
         progressMax: 4,
@@ -58,7 +58,7 @@ const projects = [
     {
         title: `Square Series`,
         slug: `square-series`,
-        icon: ``,
+        icon: `fas fa-superscript`,
         subtitle: `How fast does the square increase? Answer: fast.`,
         progressValue: null,
         progressMax: null,
