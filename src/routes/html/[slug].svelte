@@ -29,7 +29,7 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
-    <li><a href="html">HTML5 & CSS3</a></li>
+    <li><a href="html">HTML & CSS</a></li>
     <li class="is-active"><a href="html/{project.slug}">{project.title}</a></li>
   </ul>
 </nav>

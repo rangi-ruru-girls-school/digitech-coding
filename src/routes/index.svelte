@@ -27,7 +27,7 @@
   <div class="tile is-parent">
     <a class="tile is-child box" href="js">
       <i class="fa-10x fab fa-js" />
-      <span>JavaScript and jQuery</span>
+      <span>JavaScript</span>
     </a>
   </div>
   <div class="tile is-parent">

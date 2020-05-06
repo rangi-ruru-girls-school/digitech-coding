@@ -32,7 +32,7 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
-    <li class="is-active"><a href="html">HTML</a></li>
+    <li class="is-active"><a href="html">HTML & CSS</a></li>
   </ul>
 </nav>
 

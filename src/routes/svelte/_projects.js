@@ -339,6 +339,62 @@ const projects = [
         description: ``,
         code: `https://svelte.dev/repl/07c1672bb7fc48b69a957e3f22d15748`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Cipher v1`,
+        slug: `cipher-v1`,
+        icon: ``,
+        subtitle: `Sending secret messages.`,
+        progressValue: 1,
+        progressMax: 4,
+        prev: null,
+        next: `cipher-v2`,
+        video: null,
+        description: ``,
+        code: `https://svelte.dev/repl/04a779f9a0bd45a096ab9ce45a2f050d`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Cipher v2`,
+        slug: `cipher-v2`,
+        icon: ``,
+        subtitle: `Sending secret messages.`,
+        progressValue: 2,
+        progressMax: 4,
+        prev: `cipher-v1`,
+        next: `cipher-v3`,
+        video: null,
+        description: ``,
+        code: `https://svelte.dev/repl/0826f86a2d37486c830b8cac04e95f4b`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`, `Arrays`]
+    },
+    {
+        title: `Cipher v3`,
+        slug: `cipher-v3`,
+        icon: ``,
+        subtitle: `Sending secret messages.`,
+        progressValue: 3,
+        progressMax: 4,
+        prev: `cipher-v2`,
+        next: `cipher-v4`,
+        video: null,
+        description: ``,
+        code: `https://svelte.dev/repl/15ae4a7fc437476cb0f6ed9baa0bc292`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`, `Arrays`]
+    },
+    {
+        title: `Cipher v4`,
+        slug: `cipher-v4`,
+        icon: ``,
+        subtitle: `Sending secret messages.`,
+        progressValue: 4,
+        progressMax: 4,
+        prev: `cipher-v3`,
+        next: null,
+        video: null,
+        description: ``,
+        code: `https://svelte.dev/repl/19e28f0770f64c0cb93fce9ee5d53c4b`,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`, `Arrays`]
     }
 ];
 

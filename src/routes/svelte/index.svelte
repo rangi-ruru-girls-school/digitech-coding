@@ -70,5 +70,11 @@
         <span>Password Searcher</span>
       </a>
     </div>
+    <div class="tile is-parent">
+      <a class="tile is-child box" rel="prefetch" href="svelte/cipher-v1">
+        <i class="fas fa-hourglass-half fa-3x" />
+        <span>Cipher</span>
+      </a>
+    </div>
   </div>
 </section>

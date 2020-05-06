@@ -32,7 +32,7 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
-    <li><a href="js">JavaScript and jQuery</a></li>
+    <li><a href="js">JavaScript</a></li>
     <li class="is-active"><a href="js/if-statements">If Statements</a></li>
   </ul>
 </nav>

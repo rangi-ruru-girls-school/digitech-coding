@@ -69,7 +69,7 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
-    <li><a href="js">JavaScript and jQuery</a></li>
+    <li><a href="js">JavaScript</a></li>
     <li><a href="js/functions">Functions</a></li>
     <li class="is-active"><a href="js/{project.slug}">{project.title}</a></li>
   </ul>

@@ -5,10 +5,6 @@
 </script>
 
 <style>
-  button {
-    margin-top: 10px;
-  }
-
   iframe {
     height: 450px;
     width: 100%;
@@ -18,18 +14,23 @@
   }
 </style>
 
-<h2 class="subtitle">Practice Quiz</h2>
+<hr>
 
-<p>The quiz below covers some of the key skills up to this point. It is designed to help you identify what you know and what you need to practice. You can take the test as many times as you like.</p>
+<div class="content">
+  <h2 class="subtitle">Practice Quiz</h2>
 
-<button
-  class="button"
-  on:click={() => {
-    showTest = !showTest;
-  }}>
-  {showTest ? 'Hide' : 'Show'} Quiz
-</button>
+  <p>The quiz below covers some of the key skills up to this point. It is designed to help you identify what you know and what you need to practice. You can take the test as many times as you like.</p>
 
-{#if showTest}
-  <iframe {title} {src} />
-{/if}
+  <button
+    class="button"
+    on:click={() => {
+      showTest = !showTest;
+    }}>
+    {showTest ? 'Hide' : 'Show'} Quiz
+  </button>
+
+  {#if showTest}
+    <iframe {title} {src} />
+  {/if}
+</div>
+

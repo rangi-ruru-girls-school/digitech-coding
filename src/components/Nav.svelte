@@ -37,7 +37,7 @@
         rel="prefetch"
         href="js">
         <i class="fab fa-js" />
-        <span>JavaScript and jQuery</span>
+        <span>JavaScript</span>
       </a>
       <a
         class="navbar-item"
