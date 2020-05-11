@@ -349,8 +349,32 @@ const projects = [
         progressMax: 4,
         prev: null,
         next: `cipher-v2`,
-        video: null,
-        description: ``,
+        video: `https://www.youtube.com/embed/N6pURvH92sQ`,
+        description: `<h2>Brief</h2>
+
+        <p>Write an app that encrypts a sentence into numbers using the character codes of the letters, separated by pipes (|).</p>
+        
+        <p>The user should be able to write any sentence they like into an input, click a button, and be given the encrypted output, e.g.</p>
+        
+        <blockquote>this is a secret message</blockquote>
+        
+        <p>encrypts to...</p>
+        
+        <blockquote>121|111|117|32|97|99|116|117|97|108|108|121|32|99|104|101|99|107|101|100|33|</blockquote>
+        
+        <p>Here's some references to help you write this app:</p>
+        
+        <ul>
+          <li><a href="https://www.w3schools.com/js/js_loop_for.asp"><code>for</code> loops</a></li>
+          <li><a href="https://www.w3schools.com/jsref/jsref_charCodeAt.asp"><code>charCodeAt( )</code></a></li>
+          <li style="list-style-type: none;">---</li>
+          <li><a href="https://svelte.dev/docs#Component_format">Svelte format</a></li>
+          <li><a href="https://svelte.dev/docs#Text_expressions">Output</a></li>
+          <li><a href="https://svelte.dev/docs#bind_element_property">Input</a></li>
+          <li><a href="https://svelte.dev/docs#on_element_event">Buttons</a></li>
+        </ul>
+        
+        <p><em>You can use the Svelte example below if you need help to get started. It contains all of the code for this program. If you can, try to complete the program without looking at it.</em></p>`,
         code: `https://svelte.dev/repl/04a779f9a0bd45a096ab9ce45a2f050d`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
     },
