@@ -3,7 +3,7 @@ const projects = [
         title: `'ello 'ello 'ello`,
         slug: `ello-ello-ello`,
         icon: `fas fa-hard-hat`,
-        subtitle: `The usual greeting from a steroetyping British police officer.`,
+        subtitle: `The usual greeting from a stereotypical British police officer.`,
         progressValue: 1,
         progressMax: 4,
         prev: null,

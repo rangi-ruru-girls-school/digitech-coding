@@ -29,50 +29,26 @@
 <section class="section">
   <div class="tile is-ancestor">
     <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/hello-world">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>Hello World</span>
+      <a class="tile is-child box" rel="prefetch" href="svelte/intro-projects">
+        <i class="fas fa-door-open fa-3x" />
+        <span>Intro Projects</span>
       </a>
     </div>
     <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/the-repeater">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>The Repeater</span>
+      <a class="tile is-child box" rel="prefetch" href="svelte/todo-list">
+        <i class="fas fa-check-square fa-3x" />
+        <span>Todo List</span>
       </a>
     </div>
     <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/hot-chocolate">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>Hot Chocolate</span>
+      <a class="tile is-child box" rel="prefetch" href="svelte/password-search">
+        <i class="fas fa-unlock-alt fa-3x" />
+        <span>Password Search</span>
       </a>
     </div>
     <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/the-box">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>The Box</span>
-      </a>
-    </div>
-    <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/hipster-ipsum">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>Hipster Ipsum</span>
-      </a>
-    </div>
-    <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/hipster-ipsum">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>To-do List</span>
-      </a>
-    </div>
-    <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/password-searcher-v1">
-        <i class="fas fa-hourglass-half fa-3x" />
-        <span>Password Searcher</span>
-      </a>
-    </div>
-    <div class="tile is-parent">
-      <a class="tile is-child box" rel="prefetch" href="svelte/cipher-v1">
-        <i class="fas fa-hourglass-half fa-3x" />
+      <a class="tile is-child box" rel="prefetch" href="svelte/cipher">
+        <i class="fas fa-user-secret fa-3x" />
         <span>Cipher</span>
       </a>
     </div>

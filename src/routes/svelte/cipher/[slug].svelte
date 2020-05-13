@@ -2,7 +2,7 @@
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
     // this file is called [slug].svelte
-    const res = await this.fetch(`svelte/${params.slug}.json`);
+    const res = await this.fetch(`svelte/cipher/${params.slug}.json`);
     const data = await res.json();
 
     if (res.status === 200) {
@@ -14,10 +14,10 @@
 </script>
 
 <script>
-  import Hero from '../../components/Hero.svelte'
-  import ProgressBar from '../../components/ProgressBar.svelte'
-  import Video from '../../components/Video.svelte'
-  import Code from '../../components/Code.svelte'
+  import Hero from '../../../components/Hero.svelte'
+  import ProgressBar from '../../../components/ProgressBar.svelte'
+  import Video from '../../../components/Video.svelte'
+  import Code from '../../../components/Code.svelte'
 
   export let project;
 </script>
@@ -30,14 +30,15 @@
   <ul>
     <li><a href=".">DigiTech</a></li>
     <li><a href="svelte">Svelte</a></li>
-    <li class="is-active"><a href="svelte/{project.slug}">{project.title}</a></li>
+    <li><a href="svelte/cipher">Cipher</a></li>
+    <li class="is-active"><a href="svelte/cipher/{project.slug}">{project.slug}</a></li>
   </ul>
 </nav>
 
 <Hero title={project.title} subtitle={project.subtitle} skills={project.skills} />
 
 {#if project.progressValue}
-  <ProgressBar value={project.progressValue} max={project.progressMax} prev="svelte/{project.prev}" next="svelte/{project.next}" />
+  <ProgressBar value={project.progressValue} max={project.progressMax} prev="svelte/cipher/{project.prev}" next="svelte/cipher/{project.next}" />
 {/if}
 
 <section class="section">
