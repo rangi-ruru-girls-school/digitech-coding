@@ -63,8 +63,10 @@ const projects = [
           <li><a href="https://www.w3schools.com/jquery/html_text.asp">.text( )</a></li>
         </ul>
         
-        <h2>Revise</h2>
+        <h2>Revision</h2>
         <p>If you'd like to play a revision game with a group of friends, you can run <a href="https://create.kahoot.it/share/javascript/081c274e-d54f-4c25-a830-1a7046c95cb7">this Kahoot</a>.</p>
+
+        <p>You can also do <a href="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=2uSr4UrrGkOh5f81ZvbCeMB7Bm3FAhZHrr7QBRekTu1UMDIyVkQzQU5EWTUzUk9WMVc0SFA3SDJZSC4u">this revision quiz</a> to test your knowledge of input, output, and if statements.</p>
 
         <h2>Brief</h2>
         <p>Write a program that acts as a calculator. It should at least be able to add, subtract, multiply, and divide. You can extend the program to any further operations you wish.</p>
