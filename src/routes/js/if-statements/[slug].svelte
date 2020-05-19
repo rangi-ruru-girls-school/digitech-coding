@@ -17,7 +17,7 @@
   import Hero from '../../../components/Hero.svelte'
   import ProgressBar from '../../../components/ProgressBar.svelte'
   import Video from '../../../components/Video.svelte'
-  import Code from '../../../components/Code.svelte'
+  import Sandbox from '../../../components/Sandbox.svelte'
   
   export let project
 </script>
@@ -48,5 +48,5 @@
 
   <p class="content">{@html project.description}</p>
 
-  <Code title={project.title} src={project.code} />
+  <Sandbox title={project.title} src={project.code} />
 </section>

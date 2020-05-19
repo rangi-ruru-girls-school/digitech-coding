@@ -23,7 +23,7 @@
 
   <button
     class="button"
-    on:click={() => {
+    on:click={ () => {
       showCode = !showCode;
     }}>
     {showCode ? 'Hide' : 'Show'} Code

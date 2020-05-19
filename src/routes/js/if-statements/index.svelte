@@ -10,6 +10,7 @@
 
 <script>
   import Hero from '../../../components/Hero.svelte'
+  import Sandbox from '../../../components/Sandbox.svelte'
 
   export let projects
 </script>

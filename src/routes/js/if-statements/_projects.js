@@ -10,7 +10,7 @@ const projects = [
         next: `is-it-more-than-2`,
         video: `https://www.youtube.com/embed/89FpJQoLr4Y`,
         description: ``,
-        code: `https://codepen.io/MrHullen/embed/PoPJbYa?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `PoPJbYa`,
         skills: [`Output`, `Variables`, `If Statements`]
     },
     {
@@ -24,7 +24,7 @@ const projects = [
         next: `options`,
         video: `https://www.youtube.com/embed/CNocmbrZh7o`,
         description: ``,
-        code: `https://codepen.io/MrHullen/embed/ZEEpMEe?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `ZEEpMEe`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         next: `calculator`,
         video: `https://www.youtube.com/embed/tnmevGG87_I`,
         description: ``,
-        code: `https://codepen.io/MrHullen/embed/NWWRBZW?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `NWWRBZW`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
@@ -74,7 +74,7 @@ const projects = [
         <p>Use the code below to get you started. Copy and paste the HTML into your own file. You do not need to write any more HTML to complete this project.</p>
         
         <p><em>You can use the JavaScript below if you need help to get started. It contains comments explaining each step of this program. If you can, try to complete the program without looking at it.</em></p>`,
-        code: `https://codepen.io/MrHullen/embed/dyypqmL?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `dyypqmL`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
