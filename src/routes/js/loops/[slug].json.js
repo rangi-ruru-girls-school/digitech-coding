@@ -1,6 +1,7 @@
 import projects from './_projects.js';
 
 const lookup = new Map();
+
 projects.forEach(project => {
 	lookup.set(project.slug, JSON.stringify(project));
 });

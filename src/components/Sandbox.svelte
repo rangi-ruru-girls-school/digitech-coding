@@ -19,10 +19,6 @@
 <hr>
 
 <div class="content">
-  <h2>Sandbox</h2>
-
-  <p>Feel free to play around with the example below to see how the web page reacts to your code changes in a consequence-free environment. You won't break or overwrite anything so go for gold.</p>
-
   <button
     class="button"
     on:click={ () => {

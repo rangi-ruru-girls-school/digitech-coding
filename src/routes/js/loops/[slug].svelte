@@ -1,3 +1,4 @@
+  
 <script context="module">
   export async function preload({ params, query }) {
     // the `slug` parameter is available because
@@ -17,9 +18,9 @@
   import Hero from '../../../components/Hero.svelte'
   import ProgressBar from '../../../components/ProgressBar.svelte'
   import Video from '../../../components/Video.svelte'
-  import Code from '../../../components/Code.svelte'
-  
-  export let project;
+  import Sandbox from '../../../components/Sandbox.svelte'
+
+  export let project
 </script>
 
 <svelte:head>
@@ -48,5 +49,5 @@
 
   <p class="content">{@html project.description}</p>
 
-  <Code title={project.title} src={project.code} />
+  <Sandbox title={project.title} src={project.code} />
 </section>
