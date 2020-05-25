@@ -8,7 +8,7 @@ const projects = [
         progressMax: 4,
         prev: null,
         next: `counting`,
-        video: `https://www.youtube.com/embed/uxDu67KBnC8`,
+        video: `https://www.youtube.com/embed/x2erl5w9gww`,
         description: `<h2>Brief</h2>
         <blockquote>Write a program that outputs "'ello" a set number of times using a <code>while</code> loop.</blockquote>
 
@@ -42,7 +42,7 @@ const projects = [
         progressMax: 4,
         prev: `ello-ello-ello`,
         next: `factorial`,
-        video: ``,
+        video: `https://www.youtube.com/embed/YX0r8CR2ad4`,
         description: `<h2>Brief</h2>
         <blockquote>Write a program that outputs all the numbers up to a number input by the user. You can choose whether to start at zero or one.</blockquote>
 
