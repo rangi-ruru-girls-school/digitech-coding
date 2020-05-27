@@ -9,7 +9,7 @@
 </script>
 
 <script>
-  export let projects;
+  // export let projects;
 </script>
 
 <svelte:head>

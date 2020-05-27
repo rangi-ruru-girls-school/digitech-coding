@@ -84,9 +84,45 @@ const projects = [
         prev: null,
         next: null,
         video: null,
-        description: `<p>Use the code starter below to write your program.</p>`,
-        code: `https://codepen.io/MrHullen/embed/KKKgBdL?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        description: `
+            <h2>Brief</h2>
+            <blockquote>
+                <p>Write a program that tells the user how long they have left to live based on their age. You should use the average life expectancy to do this.</p>
+                
+                <p>For example, the user enters <code>15</code> then your program should ouput:</p>
+
+                <code>You have 65 years left to live.</code>
+            </blockquote>
+            
+            <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
+        code: null,
         skills: [`Input`, `Output`, `Variables`]
+    },
+    {
+        title: `GST Calculator`,
+        slug: `gst-calculator`,
+        icon: `fas fa-file-invoice-dollar`,
+        subtitle: `I guess it'll help when you do your tax return?`,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: `
+            <h2>Brief</h2>
+            <blockquote>
+                <p>Write a program that allows the user to either add or subtract GST for a given price.</p>
+
+                <p>For example, the user enters <code>8.50</code> and selects <code>Remove GST</code> then your program should ouput:</p>
+                
+                <code>$8.50 minus GST is $7.39</code>
+            </blockquote>
+            
+            <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
+        code: null,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
     }
 ];
 

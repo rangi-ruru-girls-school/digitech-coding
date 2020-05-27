@@ -78,16 +78,52 @@ const projects = [
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
-        title: `Extra`,
-        slug: ``,
-        icon: ``,
-        subtitle: ``,
+        title: `Angle Converter`,
+        slug: `angle-converter`,
+        icon: `fas fa-drafting-compass`,
+        subtitle: `Stop being obtuse, you know I'm right.`,
         progressValue: null,
         progressMax: null,
         prev: null,
         next: null,
         video: null,
-        description: ``,
+        description: `
+            <h2>Brief</h2>
+            <blockquote>
+                <p>Write a program that converts from degrees to radians and vice versa, and tells the user what type of angle it is.</p>
+
+                <p>For example, the user enters <code>90</code> and selects <code>Degrees to Radians</code> then your program should ouput:</p>
+
+                <code>90 degrees is 0.0175 radians and is a right angle.</code>
+            </blockquote>
+            
+            <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
+        code: null,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+    },
+    {
+        title: `Metric and Imperial Converter`,
+        slug: `metric-imperial`,
+        icon: `fas fa-balance-scale-right`,
+        subtitle: `Who even uses Imperial?`,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: `
+            <h2>Brief</h2>
+            <blockquote>
+                <p>Write a program that converts to and from kilograms and pounds, and inches and centimeters.</p>
+
+                <p>For example, the user enters <code>10</code> and selects <code>Centimeters to Inches</code> then your program should ouput:</p>
+                
+                <code>10 centimeters is 3.94 inches</code>
+            </blockquote>
+            
+            <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
         code: null,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     }

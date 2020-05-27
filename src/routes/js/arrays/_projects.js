@@ -56,18 +56,58 @@ const projects = [
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
-        title: `Extra`,
-        slug: `extra`,
-        icon: ``,
+        title: `Number Search`,
+        slug: `number-search`,
+        icon: `fas fa-search`,
+        subtitle: `Is that number in there?`,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>
+            <p>Write a program that takes a number from the user and tells them whether that number is in a predefined array and at what position.</p>
+
+            <p>For example, if the user enters <code>3</code> and your array is <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code> then your program should ouput:</p>
+
+            <code>3 is in the array at position 2</code>
+          </blockquote>
+          
+          <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
+        code: null,
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`, `Arrays`]
+    },
+    {
+        title: `Sorted Check`,
+        slug: `sorted-check`,
+        icon: `fas fa-check-double`,
         subtitle: ``,
         progressValue: null,
         progressMax: null,
         prev: null,
         next: null,
         video: null,
-        description: ``,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>
+            <p>Write a program that checks a predefined array to see if it is in sorted order.</p>
+
+            <p>For example, if your array is <code>[1, 2, 3, 4, 5, 6, 7, 8, 9]</code> then your program should ouput:</p>
+
+            <code>The array is sorted.</code>
+
+            <p>Or, if your array is <code>[1, 2, 7, 5, 4, 6, 3, 8, 9]</code> then your program should ouput:</p>
+
+            <code>The array is not sorted.</code>
+          </blockquote>
+          
+          <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
         code: null,
-        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+        skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`, `Arrays`]
     }
 ];
 

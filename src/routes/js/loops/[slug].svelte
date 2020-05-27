@@ -49,5 +49,7 @@
 
   <p class="content">{@html project.description}</p>
 
-  <Sandbox title={project.title} src={project.code} />
+  {#if project.code}
+    <Sandbox title={project.title} src={project.code} />
+  {/if}
 </section>

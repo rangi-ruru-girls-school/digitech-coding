@@ -11,7 +11,7 @@
 <script>
   import Hero from '../../../components/Hero.svelte'
 
-  export let projects
+  // export let projects
 </script>
 
 <style>
@@ -19,10 +19,11 @@
     text-align: center;
   }
 
+/*
   span {
     display: block;
     margin-top: 10px;
-  }
+  }*/
 </style>
 
 <svelte:head>

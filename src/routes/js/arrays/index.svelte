@@ -10,8 +10,11 @@
 
 <script>
   import Hero from '../../../components/Hero.svelte'
+  import Cheat from '../../../components/Cheat.svelte'
 
   export let projects
+
+  let showProjects = 4
 </script>
 
 <style>
@@ -42,7 +45,7 @@
 <section class="section">
   <div class="tile is-ancestor">
     {#each projects as project, index}
-      {#if index != projects.length - 1}
+      {#if index < showProjects}
         <div class="tile is-parent">
             <a class="tile is-child box" href="js/arrays/{project.slug}" rel="prefetch">
               <i class="{project.icon} fa-3x" />
@@ -52,4 +55,5 @@
       {/if}
     {/each}
   </div>
+  <Cheat bind:value={showProjects} />
 </section>

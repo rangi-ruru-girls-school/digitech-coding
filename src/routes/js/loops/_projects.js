@@ -78,7 +78,7 @@ const projects = [
         next: `hailstone-numbers`,
         video: ``,
         description: `<h2>Brief</h2>
-        <blockquote>Write a program that calculates the factorial of a number input by the user, e.g. 5! = 125.</blockquote>
+        <blockquote>Write a program that calculates the factorial of a number input by the user, e.g. 5! = 120.</blockquote>
 
         <p>Here are some links to resources for this project.</p>
         <ul>
@@ -177,9 +177,47 @@ const projects = [
         prev: null,
         next: null,
         video: null,
-        description: ``,
-        code: `OJJojwQ`,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>
+            <p>Write a program that calculates the Square Series to either 10, 50, or 100 values.</p>
+          
+            <p>The options of showing 10, 50, or 100 must be radio buttons.</p>
+        
+            <p>For example, if the user selects <code>10</code> then your program should ouput:</p>
+          
+            <code>0, 1, 4, 9, 16, 25, 36, 49, 64, 81</code>
+          </blockquote>
+          
+          <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
+        code: null,
         skills: [`Input`, `Output`, `Variables`, `If Statements`, `Loops`]
+    },
+    {
+        title: `Fibonacci Sequence`,
+        slug: `fibonacci`,
+        icon: `fas fa-signal`,
+        subtitle: `Everyone's favourite number sequence, but how does it get off zero?`,
+        progressValue: null,
+        progressMax: null,
+        prev: null,
+        next: null,
+        video: null,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>
+            <p>Write a program that calculates the Fibonacci Sequence up to a maximum number defined by the user.</p>
+          
+            <p>For example, if the user enters <code>25</code> then your program should ouput:</p>
+        
+            <code>0, 0, 1, 2, 3, 5, 8, 13, 21</code>
+          </blockquote>
+          
+          <p>You're here so it's assumed you can write the HTML for this project.</p>
+        `,
+        code: null,
+        skills: [`Input`, `Output`, `Variables`, `Loops`]
     }
 ];
 
