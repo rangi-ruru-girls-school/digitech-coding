@@ -11,6 +11,7 @@
 <script>
   import Hero from '../../../components/Hero.svelte'
   import Cheat from '../../../components/Cheat.svelte'
+  import Loops from '../../../components/Loops.svelte'  
 
   export let projects
 
@@ -56,4 +57,6 @@
     {/each}
   </div>
   <Cheat bind:value={showProjects} />
+
+    <Loops />
 </section>

@@ -1,3 +1,4 @@
+/*
 import { timestamp, files, shell, routes } from '@sapper/service-worker';
 
 const ASSETS = `cache${timestamp}`;
@@ -56,7 +57,7 @@ self.addEventListener('fetch', event => {
 		event.respondWith(caches.match('/service-worker-index.html'));
 		return;
 	}
-	*/
+	
 
 	if (event.request.cache === 'only-if-cached') return;
 
@@ -80,3 +81,4 @@ self.addEventListener('fetch', event => {
 			})
 	);
 });
+*/
