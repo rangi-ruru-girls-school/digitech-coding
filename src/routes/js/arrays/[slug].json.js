@@ -1,4 +1,4 @@
-import projects from './_projects.js';
+import projects from './_projects.js'
 
 const lookup = new Map();
 projects.forEach(project => {

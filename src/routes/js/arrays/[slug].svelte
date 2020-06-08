@@ -6,9 +6,9 @@
     const data = await res.json();
 
     if (res.status === 200) {
-      return { project: data };
+      return { project: data }
     } else {
-      this.error(res.status, data.message);
+      this.error(res.status, data.message)
     }
   }
 </script>
@@ -18,8 +18,11 @@
   import ProgressBar from '../../../components/ProgressBar.svelte'
   import Video from '../../../components/Video.svelte'
   import Sandbox from '../../../components/Sandbox.svelte'
-  
+
   export let project
+
+  console.log('project: ' + JSON.stringify(project))
+
 </script>
 
 <svelte:head>

@@ -1,20 +1,10 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`js/arrays.json`)
-      .then(r => r.json())
-      .then(projects => {
-        return { projects };
-      });
-  }
-</script>
-
 <script>
   import Hero from '../../../components/Hero.svelte'
   import Cheat from '../../../components/Cheat.svelte'
-
-  export let projects
+  import projects from './_projects.js'
 
   let showProjects = 4
+  let showExt = false
 </script>
 
 <style>
@@ -45,7 +35,7 @@
 <section class="section">
   <div class="tile is-ancestor">
     {#each projects as project, index}
-      {#if index < showProjects}
+      {#if index < 4}
         <div class="tile is-parent">
             <a class="tile is-child box" href="js/arrays/{project.slug}" rel="prefetch">
               <i class="{project.icon} fa-3x" />
@@ -55,5 +45,5 @@
       {/if}
     {/each}
   </div>
-  <Cheat bind:value={showProjects} />
+  <Cheat bind:value={showExt} />
 </section>

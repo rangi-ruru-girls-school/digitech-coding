@@ -2,21 +2,12 @@
   export let value
 
   function cheat() {
-    console.log(value)
     let code = prompt('Code:')
     if (code.toLowerCase() === 'iddqd') {
       alert('Code accepted!')
-      value = 6
-    } else if (code.toLowerCase() === 'idkfa') {
-      if (value < 5) {
-        alert('Code accepted!')
-        value = 5
-      } else {
-        alert('Better code already applied.')
-      }
+      value = true
     } else {
       alert('Sorry.')
-      value = 4
     }
   }
 </script>

@@ -9,8 +9,30 @@ const projects = [
         prev: null,
         next: `subject-list`,
         video: null,
-        description: ``,
-        code: `https://codepen.io/MrHullen/embed/MWWbLBP?height=265&theme-id=light&default-tab=html,result`,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>Write a program that outputs a random job from an array.</blockquote>
+
+          <p>Here are some links to explanations of arrays</p>
+          <ul>
+            <li>
+              <a href="https://javascript.info/array">
+                  arrays on javascript.info
+              </a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/js/js_arrays.asp">
+                  arrays on W3Schools
+              </a>
+            </li>
+          </ul>
+          
+          <p>Use the code below to get you started. Copy and paste the HTML into your own file. You do not need to write any more HTML to complete this project.</p>
+          
+          <p><em>You can use the JavaScript below if you need help to get started. It contains everything you need for this program.</p>
+          <p>If you can, try to complete the project without looking at it.</em></p>
+        `,
+        code: `MWWbLBP`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
@@ -23,8 +45,30 @@ const projects = [
         prev: `future-job`,
         next: `list-the-weekdays`,
         video: null,
-        description: ``,
-        code: `https://codepen.io/MrHullen/embed/pooNGGO?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>Write a program that lets you add and remove subjects from an array.</blockquote>
+
+          <p>Here are some links about how to build this</p>
+          <ul>
+            <li>
+              <a href="https://javascript.info/array#methods-pop-push-shift-unshift">
+                  Add to an array: <code>push</code> on javascript.info
+              </a>
+            </li>
+            <li>
+              <a href="https://javascript.info/array-methods#splice">
+                Delete from an array: <code>splice</code> on javascript.info
+              </a>
+            </li>
+          </ul>
+          
+          <p>Use the code below to get you started. Copy and paste the HTML into your own file. You do not need to write any more HTML to complete this project.</p>
+          
+          <p><em>You can use the JavaScript below if you need help to get started. It contains everything you need for this program.</p>
+          <p>If you can, try to complete the project without looking at it.</em></p>
+        `,
+        code: `pooNGGO`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
@@ -37,8 +81,25 @@ const projects = [
         prev: `subject-list`,
         next: `shopping-list`,
         video: null,
-        description: ``,
-        code: `https://codepen.io/MrHullen/embed/pooOLar?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        description: `
+          <h2>Brief</h2>
+          <blockquote>Write a program that loops through an array and outputs the days of the week.</blockquote>
+
+          <p>Here are some links to explanations of arrays</p>
+          <ul>
+            <li>
+              <a href="https://javascript.info/array-methods#iterate-foreach">
+                  Loop through an array: <code>forEach</code> on javascript.info
+              </a>
+            </li>
+          </ul>
+          
+          <p>Use the code below to get you started. Copy and paste the HTML into your own file. You do not need to write any more HTML to complete this project.</p>
+          
+          <p><em>You can use the JavaScript below if you need help to get started. It contains everything you need for this program.</p>
+          <p>If you can, try to complete the project without looking at it.</em></p>
+        `,
+        code: `pooOLar`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
@@ -51,8 +112,45 @@ const projects = [
         prev: `list-the-weekdays`,
         next: null,
         video: null,
-        description: ``,
-        code: `https://codepen.io/MrHullen/embed/LYYbqJE?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        description: `
+          <p>This project is a chance for you to practice the skills you learnt in the previous three projects.</p>
+
+          You'll need to use all of the skills to write the code. Here's some references to help:
+          <ul>
+            <li>
+              <a href="https://javascript.info/array#declaration">
+                  Create and reference an array
+              </a>
+            </li>
+            <li>
+              <a href="https://javascript.info/array-methods#add-remove-items">
+                  Add an item to an array
+              </a>
+            </li>
+            <li>
+              <a href="https://javascript.info/array-methods#splice">
+                  Delete an item from an array
+              </a>
+            </li>
+            <li>
+              <a href="https://javascript.info/array-methods#iterate-foreach">
+                  Loop over an array
+              </a>
+            </li>
+          </ul>
+          
+          <h2>Revision</h2>
+          <p>Coming soon...</p>
+
+          <h2>Brief</h2>
+          <blockquote>Write a program that lets the user create a shopping list. They should be able to add and remove items from the list, which should be output on the page for them to see.</blockquote>
+          
+          <p>Use the code below to get you started. Copy and paste the HTML into your own file. You do not need to write any more HTML to complete this project.</p>
+          
+          <p><em>You can use the JavaScript below if you need help to get started. It contains comments explaining each step of this program.</p>
+          <p>If you can, try to complete the program without looking at it.</em></p>
+        `,
+        code: `LYYbqJE`,
         skills: [`Input`, `Output`, `Variables`, `If Statements`]
     },
     {
