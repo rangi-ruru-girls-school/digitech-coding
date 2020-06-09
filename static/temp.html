@@ -1,0 +1,27 @@
+<h2>Version 3 Brief</h2>
+<blockquote>Add a button that lets the user save their tasks.</blockquote>
+
+<p>In this version you'll learn the following skills:</p>
+<ul>
+    <li>Save information to the computer</li>
+    <li>Convert an array to JSON</li>
+</ul>
+
+<p>If you need to brush up on function parameters, read the <strong>parameter</strong> section of <a href="https://javascript.info/function-basics#parameters">this guide</a> before starting.</p>
+
+<h3>Script</h3>
+<pre><code>function saveTasks() {
+  localStorage.todos = JSON.stringify(tasks)
+}</code></pre>
+
+
+
+<h3>Markup</h3>
+<pre><code>&lt;button on:click={saveTasks}&gt;💾 Save&lt;/button&gt;</code></pre>
+
+
+
+<hr>
+
+<em><p>You can use the Svelte code below if you need help to get started. It contains everything you need for this program.</p>
+<p>If you can, try to complete the project without looking at it.</p></em>

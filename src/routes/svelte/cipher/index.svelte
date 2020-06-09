@@ -52,10 +52,16 @@
   <div class="tile is-ancestor">
     {#each projects as project, index}
       <div class="tile is-parent">
-          <a class="tile is-child box" href="svelte/cipher/{project.slug}" rel="prefetch">
-            <span class="project-icon">{project.icon}</span>
-            <span class="project-title">{project.title}</span>
-          </a>
+        <a class="tile is-child box" href="svelte/cipher/{project.slug}" rel="prefetch">
+          <span class="project-icon">{project.icon}</span>
+          <span class="project-title">{project.title}</span>
+        </a>
+      </div>
+    {:else}
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <span>Loading projects...</span>
+        </div>
       </div>
     {/each}
   </div>

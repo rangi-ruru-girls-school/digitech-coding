@@ -11,7 +11,7 @@
 <script>
   import Hero from '../../../components/Hero.svelte'
 
-  // export let projects
+  export let projects
 </script>
 
 <style>
@@ -19,15 +19,23 @@
     text-align: center;
   }
 
-/*
-  span {
+  .project-icon {
+    font-family: 'Dosis', sans-serif;
+    font-size: 3em;
+    height: 1em;
+    line-height: 1em;
+    display: block;
+  }
+
+  .project-title {
     display: block;
     margin-top: 10px;
-  }*/
+  }
 </style>
 
 <svelte:head>
   <title>Svelte: Todo List</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap">
 </svelte:head>
 
 <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -42,16 +50,19 @@
 
 <section class="section">
   <div class="tile is-ancestor">
-  <p>Coming soon...</p>
-  <!--
     {#each projects as project, index}
       <div class="tile is-parent">
-          <a class="tile is-child box" href="svelte/todo-list/{project.slug}" rel="prefetch">
-            <i class="{project.icon} fa-3x" />
-            <span>{project.title}</span>
-          </a>
+        <a class="tile is-child box" href="svelte/todo-list/{project.slug}" rel="prefetch">
+          <span class="project-icon">{project.icon}</span>
+          <span class="project-title">{project.title}</span>
+        </a>
+      </div>
+    {:else}
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <span>Loading projects...</span>
+        </div>
       </div>
     {/each}
-    -->
   </div>
 </section>

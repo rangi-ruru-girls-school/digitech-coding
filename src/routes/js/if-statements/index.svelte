@@ -53,6 +53,12 @@
             </a>
         </div>
       {/if}
+    {:else}
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <span>Loading projects...</span>
+        </div>
+      </div>
     {/each}
   </div>
   <Cheat bind:value={showProjects} />
