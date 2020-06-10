@@ -33,7 +33,7 @@ const projects = [
           <p>If you can, try to complete the project without looking at it.</em></p>
         `,
         code: `MWWbLBP`,
-        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+        skills: [`Input`, `Output`, `Variables`, `Arrays`]
     },
     {
         title: `Subject List`,
@@ -69,7 +69,7 @@ const projects = [
           <p>If you can, try to complete the project without looking at it.</em></p>
         `,
         code: `pooNGGO`,
-        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+        skills: [`Input`, `Output`, `Variables`, `Arrays`]
     },
     {
         title: `List the Weekdays`,
@@ -100,7 +100,7 @@ const projects = [
           <p>If you can, try to complete the project without looking at it.</em></p>
         `,
         code: `pooOLar`,
-        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
     },
     {
         title: `Shopping List`,
@@ -111,7 +111,7 @@ const projects = [
         progressMax: 4,
         prev: `list-the-weekdays`,
         next: null,
-        video: null,
+        video: `https://demo-shoppinglist.netlify.app/`,
         description: `
           <p>This project is a chance for you to practice the skills you learnt in the previous three projects.</p>
 
@@ -151,7 +151,7 @@ const projects = [
           <p>If you can, try to complete the program without looking at it.</em></p>
         `,
         code: `LYYbqJE`,
-        skills: [`Input`, `Output`, `Variables`, `If Statements`]
+        skills: [`Input`, `Output`, `Variables`, `Loops`, `Arrays`]
     },
     {
         title: `Number Search`,
