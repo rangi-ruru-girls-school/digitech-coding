@@ -1,38 +1,55 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`js/objects.json`)
-      .then(r => r.json())
-      .then(projects => {
-        return { projects };
-      });
-  }
+<script>
+  import Hero from '../../../components/Hero.svelte'
+  import Cheat from '../../../components/Cheat.svelte'
+  import projects from './_projects.js'
+
+  let showProjects = 4
+  let showExt = false
 </script>
 
-<script>
-  // export let projects;
-</script>
+<style>
+  a {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    margin-top: 10px;
+  }
+</style>
 
 <svelte:head>
-  <title>Javascript: Arrays</title>
+  <title>Javascript: Objects</title>
 </svelte:head>
 
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     <li><a href=".">DigiTech</a></li>
-    <li><a href="js">JavaScript and jQuery</a></li>
+    <li><a href="js">JavaScript</a></li>
     <li class="is-active"><a href="js/objects">Objects</a></li>
   </ul>
 </nav>
 
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">Objects</h1>
-      <h2 class="subtitle">A flexible data structure to represent anything.</h2>
-    </div>
-  </div>
-</section>
+<Hero title="Objects" subtitle="A flexible way to store named information." />
 
 <section class="section">
-  <p>Coming soon...</p>
+  <div class="tile is-ancestor">
+    {#each projects as project, index}
+      {#if index < 4}
+        <div class="tile is-parent">
+            <a class="tile is-child box" href="js/objects/{project.slug}" rel="prefetch">
+              <i class="{project.icon} fa-3x" />
+              <span>{project.title}</span>
+            </a>
+        </div>
+      {/if}
+    {:else}
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <span>Loading projects...</span>
+        </div>
+      </div>
+    {/each}
+  </div>
+  <Cheat bind:value={showExt} />
 </section>

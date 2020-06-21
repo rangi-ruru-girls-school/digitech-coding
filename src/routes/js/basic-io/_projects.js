@@ -10,7 +10,7 @@ const projects = [
         next: `say-what`,
         video: `https://www.youtube.com/embed/Foy-1KkHNDE`,
         description: ``,
-        code: `https://codepen.io/MrHullen/embed/eYYdjVZ?height=309&theme-id=light&default-tab=html,result&editable=true`,
+        code: `eYYdjVZ`,
         skills: [`Output`]
     },
     {
@@ -24,7 +24,7 @@ const projects = [
         next: `the-repeater`,
         video: `https://www.youtube.com/embed/Dwj3BgYpEMU`,
         description: ``,
-        code: `https://codepen.io/MrHullen/embed/XWWjByM?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `XWWjByM`,
         skills: [`Input`, `Output`]
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         next: `mad-libs`,
         video: `https://www.youtube.com/embed/YP3y-uYUpbU`,
         description: ``,
-        code: `https://codepen.io/MrHullen/embed/BaazXBy?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `BaazXBy`,
         skills: [`Input`, `Output`, `Variables`]
     },
     {
@@ -71,7 +71,7 @@ const projects = [
         <blockquote>"ouch! he said loudly as he jumped into his convertible car and drove off with his lovely wife."</blockquote>
         
         <p>Use the code below to get you started. Copy and paste the HTML and JavaScript into your own files. You do not need to write any more HTML to complete this project.</p>`,
-        code: `https://codepen.io/MrHullen/embed/mdeBPNg?height=265&theme-id=light&default-tab=html,result&editable=true`,
+        code: `mdeBPNg`,
         skills: [`Input`, `Output`, `Variables`]
     },
     {

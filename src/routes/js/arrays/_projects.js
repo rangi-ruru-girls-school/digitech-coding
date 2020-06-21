@@ -17,12 +17,12 @@ const projects = [
           <ul>
             <li>
               <a href="https://javascript.info/array">
-                  arrays on javascript.info
+                  arrays <code>[ ]</code> on javascript.info
               </a>
             </li>
             <li>
               <a href="https://www.w3schools.com/js/js_arrays.asp">
-                  arrays on W3Schools
+                  arrays <code>[ ]</code> on W3Schools
               </a>
             </li>
           </ul>
@@ -53,12 +53,12 @@ const projects = [
           <ul>
             <li>
               <a href="https://javascript.info/array#methods-pop-push-shift-unshift">
-                  Add to an array: <code>push</code> on javascript.info
+                  add to an array: <code>push</code> on javascript.info
               </a>
             </li>
             <li>
               <a href="https://javascript.info/array-methods#splice">
-                Delete from an array: <code>splice</code> on javascript.info
+                delete from an array: <code>splice</code> on javascript.info
               </a>
             </li>
           </ul>
@@ -89,7 +89,7 @@ const projects = [
           <ul>
             <li>
               <a href="https://javascript.info/array-methods#iterate-foreach">
-                  Loop through an array: <code>forEach</code> on javascript.info
+                  loop through an array: <code>forEach</code> on javascript.info
               </a>
             </li>
           </ul>
@@ -119,22 +119,22 @@ const projects = [
           <ul>
             <li>
               <a href="https://javascript.info/array#declaration">
-                  Create and reference an array
+                  create and reference an array <code>[ ]</code> 
               </a>
             </li>
             <li>
               <a href="https://javascript.info/array-methods#add-remove-items">
-                  Add an item to an array
+                  add an item to an array: <code>push</code>
               </a>
             </li>
             <li>
               <a href="https://javascript.info/array-methods#splice">
-                  Delete an item from an array
+                  delete an item from an array: <code>splice</code>
               </a>
             </li>
             <li>
               <a href="https://javascript.info/array-methods#iterate-foreach">
-                  Loop over an array
+                  loop over an array: <code>forEach</code>
               </a>
             </li>
           </ul>

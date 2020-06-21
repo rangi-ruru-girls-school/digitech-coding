@@ -16,12 +16,12 @@ const projects = [
         <ul>
           <li>
             <a href="https://javascript.info/while-for#the-while-loop">
-                <code>while</code> loops
+              <code>while</code> loops
             </a>
           </li>
           <li>
             <a href="https://javascript.info/operators#modify-in-place">
-                +=
+              <code>+=</code>
             </a>
           </li>
         </ul>
@@ -50,12 +50,12 @@ const projects = [
         <ul>
           <li>
             <a href="https://javascript.info/while-for#the-while-loop">
-                <code>while</code> loops
+              <code>while</code> loops
             </a>
           </li>
           <li>
             <a href="https://javascript.info/operators#modify-in-place">
-                -=
+              <code>-=</code>
             </a>
           </li>
         </ul>
@@ -84,22 +84,22 @@ const projects = [
         <ul>
           <li>
             <a href="https://en.wikipedia.org/wiki/Factorial">
-                Factorial on Wikipedia
+              factorial <code>!</code> on Wikipedia
             </a>
           </li>
           <li>
             <a href="https://duckduckgo.com/?q=5!&ia=calculator">
-                Factorial calculator on DuckDuckGo
+              factorial <code>!</code> calculator on DuckDuckGo
             </a>
           </li>
           <li>
             <a href="https://javascript.info/while-for#the-while-loop">
-                <code>while</code> loops
+              <code>while</code> loops
             </a>
           </li>
           <li>
             <a href="https://javascript.info/operators#modify-in-place">
-                Modify in place
+              modify in place
             </a>
           </li>
         </ul>
@@ -127,22 +127,22 @@ const projects = [
         <ul>
           <li>
             <a href="https://en.wikipedia.org/wiki/Factorial">
-                Factorial on Wikipedia
+              factorial <code>!</code> on Wikipedia
             </a>
           </li>
           <li>
             <a href="https://duckduckgo.com/?q=5!&ia=calculator">
-                Factorial calculator on DuckDuckGo
+              factorial calculator on DuckDuckGo
             </a>
           </li>
           <li>
             <a href="https://javascript.info/while-for#the-while-loop">
-                <code>while</code> loops
+              <code>while</code> loops
             </a>
           </li>
           <li>
             <a href="https://javascript.info/operators#modify-in-place">
-                Modify in place
+              modify in place
             </a>
           </li>
         </ul>
