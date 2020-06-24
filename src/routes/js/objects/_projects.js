@@ -7,8 +7,8 @@ const projects = [
         progressValue: 1,
         progressMax: 4,
         prev: null,
-        next: `pet-register`,
-        video: null,
+        next: `find-a-pet`,
+        video: `https://www.youtube.com/watch?v=bVYYfAtKR4w`,
         description: `
           <h2>Brief</h2>
           <blockquote>Write a program that outputs the details stored about a subject.</blockquote>
