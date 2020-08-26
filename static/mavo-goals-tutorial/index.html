@@ -1,0 +1,332 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Create a Daily Goals web app</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="mavo-goals-tutorial"
+                  title="Create a Daily Goals web app"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a web app that lets the user save their name and their daily goals.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\2d4712e1e8d64c60.jpeg"></p>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to do this.</li>
+<li>How to do that.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A code writing app such as Visual Studio code (<a href="https://code.visualstudio.com/" target="_blank">download</a>)</li>
+<li>That&#39;s it!</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Write the HTML code" duration="10">
+        <h2 is-upgraded>Add the HTML starter code</h2>
+<p>The <strong>head</strong> part will have information <em>about</em> the page.</p>
+<p>It will only contain a link to some code that will kick-start this project for you.</p>
+<p>The <strong>body</strong> part will have everything that you can see <em>on</em> the page.</p>
+<p>This is where you will do all the work to create your web app.</p>
+<p>Both parts are inside the <strong>HTML</strong> tags.</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;script src=&#34;https://rrgs.nz/scripts&#34;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+
+  &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<h2 is-upgraded>Add the HTML code for the app</h2>
+<p>First, the <strong>main heading</strong>.</p>
+<p>The HTML code for the main heading is <code>&lt;h1&gt;</code></p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;h1&gt;
+      My First Web App
+    &lt;/h1&gt;
+    
+  &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<p>Second, the <strong>subheadings </strong>for <strong>My name</strong> and <strong>Daily goals</strong>.</p>
+<p>The HTML code for a subheading is <code>&lt;h2&gt;</code></p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+
+  &lt;head&gt;
+    
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+    &lt;h1&gt;
+      My First Web App
+    &lt;/h1&gt;
+
+    &lt;h2&gt;
+      My name
+    &lt;/h2&gt;
+
+    &lt;h2&gt;
+      Daily goals
+    &lt;/h2&gt;
+    
+  &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<p>Third, the <strong>sections </strong>under each subheading.</p>
+<p>The HTML code for a section is <code>&lt;section&gt;</code></p>
+<pre><code>    &lt;h2&gt;
+      My name
+    &lt;/h2&gt;
+    &lt;section&gt;
+
+    &lt;/section&gt;</code></pre>
+<pre><code>    &lt;h2&gt;
+      Daily goals
+    &lt;/h2&gt;
+    &lt;section&gt;
+
+    &lt;/section&gt;</code></pre>
+<p>Fourth, the empty <strong>name input</strong> and <strong>goals list</strong>.</p>
+<p>The <strong>name </strong>is an input where users can type. The HTML code is <code>&lt;input&gt;</code></p>
+<pre><code>    &lt;h2&gt;
+      My name
+    &lt;/h2&gt;
+    &lt;section&gt;
+      &lt;input&gt;
+    &lt;/section&gt;</code></pre>
+<p>The <strong>goals list</strong> is an unordered list of items.</p>
+<p>The HTML code for the unordered list is <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for each list item</p>
+<pre><code>    &lt;h2&gt;
+      Daily goals
+    &lt;/h2&gt;
+    &lt;section&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Write the CSS code" duration="10">
+        <p><strong>UI</strong> stands for user interface, which is the web page and its design.</p>
+<p>You&#39;ll add <strong>CSS classes</strong> to your HTML code to change the visual appearance and improve the UI.</p>
+<p>The classes you&#39;ll add are from a website called <strong>Fomantic UI</strong>. The contributors there have written lots of CSS code that you can use for free.</p>
+<h2 is-upgraded>Make the body a container for everything else</h2>
+<p>The <strong>container </strong>class adds some space around the thing it&#39;s added to.</p>
+<p>This makes the page look less cluttered.</p>
+<p><a href="https://fomantic-ui.com/elements/container.html#/definition" target="_blank">Fomantic page on containers</a></p>
+<pre><code>  &lt;body class=&#34;ui container&#34;&gt;</code></pre>
+<h2 is-upgraded>Style the main heading</h2>
+<p>The <strong>header </strong>class makes the heading big and bold.</p>
+<p>This helps the user see what information is where on the page.</p>
+<p>You&#39;ll also add the <strong>center aligned</strong> class to put the header in the middle.</p>
+<p><a href="https://fomantic-ui.com/elements/header.html#page-headers" target="_blank">Fomantic page on headers</a></p>
+<pre><code>    &lt;h1 class=&#34;ui center aligned header&#34;&gt;
+      My First Web App
+    &lt;/h1&gt;</code></pre>
+<h2 is-upgraded>Style the name and goals headings</h2>
+<p>The <strong>block </strong>class works with the <strong>header </strong>class to add a background.</p>
+<p>This further helps show the user where things are on the page.</p>
+<p><a href="https://fomantic-ui.com/elements/header.html#block" target="_blank">Fomantic page on block headers</a></p>
+<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
+      My name
+    &lt;/h2&gt;</code></pre>
+<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
+      Daily goals
+    &lt;/h2&gt;</code></pre>
+<h2 is-upgraded>Make the sections containers for the inputs and list</h2>
+<p>You&#39;ll re-use the <strong>container</strong> class for the sections.</p>
+<p>This again helps spread things out and make the page look less cluttered.</p>
+<p><a href="https://fomantic-ui.com/elements/container.html#/definition" target="_blank">Fomantic page on containers</a></p>
+<pre><code>    &lt;section class=&#34;ui container&#34;&gt;
+      &lt;input&gt;
+    &lt;/section&gt;</code></pre>
+<pre><code>    &lt;section class=&#34;ui container&#34;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Label the Mavo app sections" duration="5">
+        <p><strong>Mavo</strong> is the thing that will make your web app interactive for the user, letting them input their name and goals.</p>
+<p>The first thing you need to do is define which parts of your HTML code should be a <strong>Mavo app</strong> (<code>mv-app</code>)</p>
+<p><a href="https://mavo.io/docs/primer#mv-app" target="_blank">Mavo page on defining a Mavo app</a></p>
+<h2 is-upgraded>My name</h2>
+<p>The <strong>My name</strong> section will need to be edited and saved.</p>
+<p>You&#39;ll call this section of the app <strong>name</strong>.</p>
+<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
+      My name
+    &lt;/h2&gt;
+    &lt;section class=&#34;ui container&#34;  mv-app=&#34;name&#34;&gt;
+      &lt;input&gt;
+    &lt;/section&gt;</code></pre>
+<h2 is-upgraded>Daily goals</h2>
+<p>The <strong>Daily goals </strong>section will also need to be edited and saved.</p>
+<p>You&#39;ll call this section of the app <strong>goals</strong>.</p>
+<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
+      Daily goals
+    &lt;/h2&gt;
+    &lt;section class=&#34;ui container&#34; mv-app=&#34;goals&#34;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add the Mavo storage" duration="5">
+        <p>Mavo lets you store the user&#39;s information.</p>
+<p>This lets the app remember the user&#39;s name and goals if they leave and come back.</p>
+<p><a href="https://mavo.io/docs/primer#mv-storage" target="_blank">Mavo page on defining the storage</a></p>
+<p>Both the <strong>name</strong> app and <strong>goals</strong> app information need to be saved.</p>
+<p>The type of storage is <strong>local</strong>.</p>
+<p>This means the information is only stored on the user&#39;s computer. It is never sent over the Internet.</p>
+<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
+      My name
+    &lt;/h2&gt;
+    &lt;section class=&#34;ui container&#34;  mv-app=&#34;name&#34; mv-storage=&#34;local&#34;&gt;
+      &lt;input&gt;
+    &lt;/section&gt;</code></pre>
+<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
+      Daily goals
+    &lt;/h2&gt;
+    &lt;section class=&#34;ui container&#34; mv-app=&#34;goals&#34; mv-storage=&#34;local&#34;&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Label the parts for Mavo to save" duration="5">
+        <p>Mavo needs to know which parts of the HTML code need to be saved.</p>
+<p>You&#39;ll do this by adding the <strong>property </strong>attribute to the relevant HTML.</p>
+<h2 is-upgraded>My name</h2>
+<p>The <strong>input </strong>needs to be saved by Mavo.</p>
+<p>You&#39;ll give it the <strong>property </strong>of <strong>name</strong>.</p>
+<pre><code>      &lt;input property=&#34;name&#34;&gt;</code></pre>
+<h2 is-upgraded>Daily goals</h2>
+<p>Each <strong>list item</strong> - which is one of the user&#39;s goals - needs to be saved by Mavo.</p>
+<p>You&#39;ll give it the <strong>property </strong>of <strong>goal</strong>.</p>
+<p>You&#39;ll add <strong>mv-multiple</strong> so the user can add more than one goal.</p>
+<pre><code>      &lt;ul&gt;
+        &lt;li property=&#34;goal&#34; mv-multiple&gt;&lt;/li&gt;
+      &lt;/ul&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="All done" duration="0">
+        <p>Your app is complete.</p>
+<p>The user can add their name and goals, hit save, and your app will remember them for the user&#39;s next visit.</p>
+<p>From here, you have a couple of options for taking your app further.</p>
+<ul>
+<li>You can add more HTML code to save, such as weekly goals or things to be grateful for.</li>
+<li>You can add more CSS class to style the app in the way you want it to look.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Next steps: Style it your way" duration="0">
+        <p>Fomantic&#39;s website has lots of options for styling web apps the way <strong>you </strong>think they should look.</p>
+<p>Experiment with some of the <strong>classes</strong> that they have available.</p>
+<p>Below are some examples of what you can do with Fomantic UI style classes.</p>
+<h2 is-upgraded>Add some colour to the headers</h2>
+<p><a href="https://fomantic-ui.com/elements/header.html#colored" target="_blank">Fomantic page on adding colours to text</a></p>
+<pre><code>    &lt;h1 class=&#34;ui violet center aligned header&#34;&gt;
+      My First Web App
+    &lt;/h1&gt;</code></pre>
+<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
+      My name
+    &lt;/h2&gt;</code></pre>
+<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
+      Daily goals
+    &lt;/h2&gt;</code></pre>
+<h2 is-upgraded>Add an icon to your main header</h2>
+<p><a href="https://fomantic-ui.com/elements/header.html#icon-headers" target="_blank">Fomantic page on adding a focussed icon to a header</a></p>
+<pre><code>    &lt;h1 class=&#34;ui center aligned icon header&#34;&gt;
+      &lt;i class=&#34;circular tasks icon&#34;&gt;&lt;/i&gt;
+      My First Web App
+    &lt;/h1&gt;</code></pre>
+<h2 is-upgraded>Add icons to the subheadings</h2>
+<p><a href="https://fomantic-ui.com/elements/header.html#icon" target="_blank">Fomantic page on adding an icon to a heading</a></p>
+<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
+      &lt;i class=&#34;users icon&#34;&gt;&lt;/i&gt;
+      My name
+    &lt;/h2&gt;</code></pre>
+<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
+      &lt;i class=&#34;bullseye icon&#34;&gt;&lt;/i&gt;
+      Daily goals
+    &lt;/h2&gt;</code></pre>
+<h2 is-upgraded>Style the name input</h2>
+<p><a href="https://fomantic-ui.com/elements/input.html" target="_blank">Fomantic page on styling inputs</a></p>
+<pre><code>      &lt;div class=&#34;ui input&#34;&gt;
+        &lt;input property=&#34;name&#34;&gt;
+      &lt;/div&gt;</code></pre>
+<h2 is-upgraded>Add an icon to the name input</h2>
+<p><a href="https://fomantic-ui.com/elements/input.html" target="_blank">Fomantic page on styling labelled inputs</a></p>
+<pre><code>      &lt;div class=&#34;ui left corner labeled input&#34;&gt;
+        &lt;input property=&#34;name&#34;&gt;
+        &lt;div class=&#34;ui left corner label&#34;&gt;
+          &lt;i class=&#34;asterisk icon&#34;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-08-26T09:24:17Z",
+  "id": "mavo-goals-tutorial",
+  "duration": 40,
+  "title": "Create a Daily Goals web app",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to create a daily goals web app to track what you want to achieve each day.",
+  "source": "1yh4dTAxt9uJPP6lbH_PArrnM6aaCLyu9CbxkINGcJuQ",
+  "theme": "mavo",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Mavo"
+  ],
+  "tags": [],
+  "url": "mavo-goals-tutorial"
+}
