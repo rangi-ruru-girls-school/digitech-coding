@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-09-01T03:17:22Z",
+  "id": "local-storage-tutorial",
+  "duration": 30,
+  "title": "Save data locally",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to save JavaScript object to your laptop and then retrieve them the next time the user visits your web app.",
+  "source": "1UnhY1orFSAyyPRBQGXQ_NdvHaJE9kQvA7Igf9omE37A",
+  "theme": "javascript",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "JavaScript"
+  ],
+  "tags": [],
+  "url": "local-storage-tutorial"
+}

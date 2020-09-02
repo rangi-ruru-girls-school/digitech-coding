@@ -1,0 +1,164 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Save data locally</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="local-storage-tutorial"
+                  title="Save data locally"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <h2 is-upgraded>What you&#39;ll build</h2>
+<p>You&#39;ll build a web app that lets the user save their name and their age.</p>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>How to do this.</li>
+<li>How to do that.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>A copy of the <a href="https://github.com/rangi-ruru-girls-school/rrgs-svelte-template/archive/master.zip" target="_blank">Rangi Ruru Svelte Template</a> - all the code in this tutorial will be in the <code>index.svelte</code> file</li>
+<li>A code writing app such as <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>That&#39;s it!</li>
+</ul>
+<p><a href="https://github.com/rangi-ruru-girls-school/rrgs-svelte-template/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download Svelte template</paper-button></a></p>
+<p><a href="https://code.visualstudio.com/" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download VS Code</paper-button></a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get ready" duration="0">
+        <p>Open the Rangi Ruru Svelte Template in Visual Studio Code.</p>
+<p>Press <code>Cmd + `</code> (or <code>Ctrl + `</code> on Windows) to open the terminal window at the bottom of VS Code.</p>
+<p>Type <code>npm run install</code> to get VS Code to download all the code needed to run Svelte web apps.</p>
+<pre>npm run install</pre>
+<p>Once that&#39;s finished, type <code>npm run dev</code> to start the web app running on your computer.</p>
+<pre>npm run dev</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create an input" duration="5">
+        <h2 is-upgraded>Step 1</h2>
+<p>First, we&#39;ll need some data to save.</p>
+<p>We&#39;ll get it from the user with an input.</p>
+<pre><code>&lt;input&gt;</code></pre>
+<p>Your page should now have a bar that you can type into.</p>
+<h2 is-upgraded>Step 2</h2>
+<p>The input isn&#39;t connected to anything so let&#39;s add a JavaScript object...</p>
+<pre><code>&lt;script&gt;
+  let person = {
+    name: &#39;&#39;
+  }
+&lt;/script&gt;</code></pre>
+<h2 is-upgraded>Step 3</h2>
+<p>... and connect the <code>name</code> property of the object to the input.</p>
+<pre><code>&lt;input bind:value={person.name} &gt;</code></pre>
+<h2 is-upgraded>Summary</h2>
+<p>Now, whatever you type into the input on the page is stored in the <code>person</code> object as the <code>name</code>         property.</p>
+<h2 is-upgraded>Your page:</h2>
+<p class="image-container"><img style="width: 572.00px" src="img\5a2a998e8cd48751.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Save the object" duration="10">
+        <p>At the moment, the web app will not remember the user if they leave the site and come back.</p>
+<p>We want them to be able to save their name and load it back in. In real life, probably the most common examples of this is remembering that you&#39;re logged in, or remembering the items that are in your cart.</p>
+<h2 is-upgraded>Step 1</h2>
+<p>First, we&#39;ll need a button the user can press to save their name.</p>
+<pre><code>&lt;button&gt;Remember me&lt;/button&gt;</code></pre>
+<h2 is-upgraded>Step 2</h2>
+<p>Next, we&#39;ll need a function below our <code>person</code> object to save it to the laptop.</p>
+<pre><code>  function saveDataToLocal() {
+    let data = JSON.stringify(person)
+    localStorage.setItem(&#39;person&#39;, data)
+  }</code></pre>
+<p>Let&#39;s break this down, line-by-line:</p>
+<aside class="special"><ol type="1" start="1">
+<li>Create a function called <code>saveDataToLocal</code></li>
+<li>Create a variable called <code>data</code>, and store a <strong>string version</strong> of the <code>person</code> object in it *</li>
+<li>Save the string version of the person object, and call it <strong>‘person&#39;</strong> **</li>
+</ol>
+</aside>
+<p><em>* You can&#39;t save the object itself to local storage, you can only store text. Luckily, you can convert the object to text first using </em><em><code>JSON.stringify</code></em><em>.</em></p>
+<p><em>** Everything you save needs to be given a name so that you can identify it later when you want to retrieve it. The name can be anything, but it should be descriptive.</em></p>
+<h2 is-upgraded>Step 3</h2>
+<p>Lastly, we need to bind the button to the function.</p>
+<pre><code>&lt;button on:click={saveDataToLocal}&gt;Remember me&lt;/button&gt;</code></pre>
+<h2 is-upgraded>Summary</h2>
+<p>Whenever you type into the input and click <strong>Remember me</strong>, your web app will save the person object with that name to your laptop.</p>
+<h2 is-upgraded>Your page:<br></h2>
+<p class="image-container"><img style="width: 602.00px" src="img\7d0558526eda0f8f.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Get the object" duration="10">
+        <p>It&#39;s great to be able to save the user&#39;s info, but it&#39;s not much use unless you can retrieve it.</p>
+<p>We want them to be able to get their details (if they&#39;ve stored them).</p>
+<h2 is-upgraded>Step 1</h2>
+<p>First, as before, we need a button the user can press to get their details.</p>
+<pre><code>&lt;button&gt;Get my details&lt;/button&gt;</code></pre>
+<h2 is-upgraded>Step 2</h2>
+<p>Next, we&#39;ll need a function to get the <strong>‘person&#39;</strong> object that was saved to the laptop.</p>
+<pre><code>  function getDataFromLocal() {
+    let data = localStorage.getItem(&#39;person&#39;)
+    person = JSON.parse(data)
+  }</code></pre>
+<p>Let&#39;s break this one down, line-by-line, too:</p>
+<aside class="special"><ol type="1" start="1">
+<li>Create a function called <code>getDataFromLocal</code></li>
+<li>Create a variable called <code>data</code>, and store the <strong>string version</strong> of the <code>person</code> object from the laptop in it</li>
+<li>Overwrite the person object with the <strong>object version</strong> of the data *</li>
+</ol>
+</aside>
+<p><em>* </em><em><code>JSON.parse</code></em><em> takes the text that represents a JavaScript object, and converts it into an actual JavaScript object.</em></p>
+<h2 is-upgraded>Step 3</h2>
+<p>Lastly, we need to bind the button to the function.</p>
+<pre><code>&lt;button on:click={getDataFromLocal}&gt;Get my details&lt;/button&gt;</code></pre>
+<h2 is-upgraded>Summary</h2>
+<p>When you click <strong>Get my details</strong> your web app will get the saved person object (if there is one) and put the name into the input.</p>
+<h2 is-upgraded>Your page:</h2>
+<p class="image-container"><img style="width: 602.00px" src="img\4a623021fa11337b.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Try it out" duration="0">
+        <p>Try writing in your name and then clicking <strong>Remember me</strong>.</p>
+<p>Now, close that tab and reopen it. Click <strong>Get my details</strong> and your name should pop into the input.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
