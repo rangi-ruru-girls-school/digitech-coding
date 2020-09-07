@@ -212,24 +212,6 @@
 <pre><code>&lt;body class=&#34;ui container&#34;&gt;</code></pre>
 <aside class="warning"><p>Run point</p>
 </aside>
-<h2 is-upgraded>Make the goals a section</h2>
-<p>You can re-use the <strong>container</strong> class to make the goals part of the page look separate from the rest.</p>
-<p>This again helps spread things out and make the page look less cluttered.</p>
-<p>Add a <code>&lt;section&gt;</code> opening tag above your goals heading.</p>
-<p>Then, add a closing <code>&lt;/section&gt;</code> tag below your goals list.</p>
-<p>Now, you can add the container class to the section opening tag.</p>
-<p><a href="https://fomantic-ui.com/elements/container.html#/definition" target="_blank">Fomantic page on containers</a></p>
-<pre><code>&lt;section class=&#34;ui container&#34;&gt;
-  &lt;h2 class=&#34;ui block header&#34;&gt;
-    Daily goals
-  &lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;First goal&lt;/li&gt;
-    &lt;/li&gt;Second goal&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</code></pre>
-<aside class="warning"><p>Run point</p>
-</aside>
 <aside class="special"><ul>
 <li>A heading with the name of the app<strong> - DONE</strong></li>
 <li>A heading with the person&#39;s name<strong> - DONE</strong></li>
@@ -286,23 +268,37 @@
 <pre><code>&lt;ul&gt;
   &lt;li property=&#34;goal&#34; mv-multiple&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+<aside class="warning"><p>Run point</p>
+</aside>
+<p>With the goals working, everything is ticked off our list!</p>
+<aside class="special"><ul>
+<li>A heading with the name of the app<strong> - DONE</strong></li>
+<li>A heading with the person&#39;s name<strong> - DONE</strong></li>
+<li>A heading for the person&#39;s goals<strong> - DONE</strong></li>
+<li>A list of their goals<strong> - DONE</strong></li>
+<li>Headings that look good<strong> - DONE</strong></li>
+<li>A list that looks good<strong> - DONE</strong></li>
+<li>The person can update and save their name<strong> - DONE</strong></li>
+<li>The person can update and save their goals<strong> - DONE</strong></li>
+</ul>
+</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="All done" duration="0">
         <p>Your app is complete.</p>
-<p>The user can add their name and goals, hit save, and your app will remember them for the user&#39;s next visit.</p>
-<p>From here, you have a couple of options for taking your app further.</p>
+<p>The person can add their name and goals, hit save, and your app will remember them for the user&#39;s next visit.</p>
+<p>From here, you have a couple of options for taking your app further:</p>
 <ul>
 <li>You can add more HTML code to save, such as weekly goals or things to be grateful for.</li>
-<li>You can add more CSS class to style the app in the way you want it to look.</li>
+<li>You can add more CSS classes to style the app in the way you want it to look.</li>
 </ul>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Next steps: Style it your way" duration="0">
+      <google-codelab-step label="Take it further: style (CSS)" duration="0">
         <p>Fomantic&#39;s website has lots of options for styling web apps the way <strong>you </strong>think they should look.</p>
 <p>Experiment with some of the <strong>classes</strong> that they have available.</p>
 <p>Below are some examples of what you can do with Fomantic UI style classes.</p>
@@ -311,28 +307,28 @@
 <pre><code>&lt;h1 class=&#34;ui violet center aligned header&#34;&gt;
   Daily Goals App
 &lt;/h1&gt;</code></pre>
-<pre><code>&lt;h2 class=&#34;ui violet block header&#34;&gt;
+<pre><code>&lt;h2 class=&#34;ui teal block header&#34;&gt;
   My name
 &lt;/h2&gt;</code></pre>
-<pre><code>&lt;h2 class=&#34;ui violet block header&#34;&gt;
+<pre><code>&lt;h2 class=&#34;ui orange block header&#34;&gt;
   Daily goals
 &lt;/h2&gt;</code></pre>
 <h2 is-upgraded>Add an icon to your main header</h2>
 <p><a href="https://fomantic-ui.com/elements/header.html#icon-headers" target="_blank">Fomantic page on adding a focussed icon to a header</a></p>
-<pre><code>    &lt;h1 class=&#34;ui center aligned icon header&#34;&gt;
-      &lt;i class=&#34;circular tasks icon&#34;&gt;&lt;/i&gt;
-      Daily Goals App
-    &lt;/h1&gt;</code></pre>
+<pre><code>&lt;h1 class=&#34;ui center aligned icon header&#34;&gt;
+  &lt;i class=&#34;circular tasks icon&#34;&gt;&lt;/i&gt;
+  Daily Goals App
+&lt;/h1&gt;</code></pre>
 <h2 is-upgraded>Add icons to the subheadings</h2>
 <p><a href="https://fomantic-ui.com/elements/header.html#icon" target="_blank">Fomantic page on adding an icon to a heading</a></p>
-<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
-      &lt;i class=&#34;users icon&#34;&gt;&lt;/i&gt;
-      My name
-    &lt;/h2&gt;</code></pre>
-<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
-      &lt;i class=&#34;bullseye icon&#34;&gt;&lt;/i&gt;
-      Daily goals
-    &lt;/h2&gt;</code></pre>
+<pre><code>&lt;h2 class=&#34;ui violet block header&#34;&gt;
+  &lt;i class=&#34;users icon&#34;&gt;&lt;/i&gt;
+  My name
+&lt;/h2&gt;</code></pre>
+<pre><code>&lt;h2 class=&#34;ui violet block header&#34;&gt;
+  &lt;i class=&#34;bullseye icon&#34;&gt;&lt;/i&gt;
+  Daily goals
+&lt;/h2&gt;</code></pre>
 
 
       </google-codelab-step>
