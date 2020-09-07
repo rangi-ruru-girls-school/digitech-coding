@@ -75,7 +75,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Write the HTML code" duration="10">
+      <google-codelab-step label="Add the content (HTML)" duration="10">
         <h2 is-upgraded>Try out some HTML code</h2>
 <p>Add this code to your <strong>index.html</strong> and click <strong>Run </strong>(green play button at the top of the page)</p>
 <pre><code>&lt;h1&gt;
@@ -160,7 +160,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Write the CSS code" duration="10">
+      <google-codelab-step label="Make it look nice (CSS)" duration="10">
         <p><strong>UI</strong> stands for user interface, which is the web page and its design.</p>
 <p>You can add <strong>CSS classes</strong> to your HTML code to change the visual appearance and improve the UI.</p>
 <p>The classes you&#39;ll add are from a website called <a href="https://fomantic-ui.com/" target="_blank"><strong>Fomantic UI</strong></a>. The contributors there have written lots of CSS code that you can use for free.</p>
@@ -230,77 +230,62 @@
 &lt;/section&gt;</code></pre>
 <aside class="warning"><p>Run point</p>
 </aside>
+<aside class="special"><ul>
+<li>A heading with the name of the app<strong> - DONE</strong></li>
+<li>A heading with the person&#39;s name<strong> - DONE</strong></li>
+<li>A heading for the person&#39;s goals<strong> - DONE</strong></li>
+<li>A list of their goals<strong> - DONE</strong></li>
+<li>Headings that look good<strong> - DONE</strong></li>
+<li>A list that looks good<strong> - DONE</strong></li>
+<li>The person can update and save their name</li>
+<li>The person can update and save their goals</li>
+</ul>
+</aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Label the Mavo app sections" duration="5">
-        <p><strong>Mavo</strong> is the thing that will make your web app interactive for the user, letting them input their name and goals.</p>
-<p>The first thing you need to do is define which parts of your HTML code should be a <strong>Mavo app</strong> (<code>mv-app</code>)</p>
+      <google-codelab-step label="Make it interactive (Mavo)" duration="5">
+        <h2 is-upgraded>Define this as an app</h2>
+<p><strong>Mavo</strong> is the thing that will make your app interactive for the person using it, letting them input their name and goals.</p>
+<p>The first thing you need to do is define that your HTML code should be a <strong>Mavo app</strong> (<code>mv-app</code>)</p>
 <p><a href="https://mavo.io/docs/primer#mv-app" target="_blank">Mavo page on defining a Mavo app</a></p>
-<h2 is-upgraded>My name</h2>
-<p>The <strong>My name</strong> section will need to be edited and saved.</p>
-<p>You&#39;ll call this section of the app <strong>name</strong>.</p>
-<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
-      My name
-    &lt;/h2&gt;
-    &lt;section class=&#34;ui container&#34;  mv-app=&#34;name&#34;&gt;
-      &lt;input&gt;
-    &lt;/section&gt;</code></pre>
-<h2 is-upgraded>Daily goals</h2>
-<p>The <strong>Daily goals </strong>section will also need to be edited and saved.</p>
-<p>You&#39;ll call this section of the app <strong>goals</strong>.</p>
-<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
-      Daily goals
-    &lt;/h2&gt;
-    &lt;section class=&#34;ui container&#34; mv-app=&#34;goals&#34;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;</code></pre>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Add the Mavo storage" duration="5">
-        <p>Mavo lets you store the user&#39;s information.</p>
+<pre><code>&lt;body class=&#34;ui container&#34; mv-app=&#34;daily-goals&#34;&gt;</code></pre>
+<h2 is-upgraded>Add the Mavo storage</h2>
+<p>Mavo lets you store the user&#39;s information.</p>
 <p>This lets the app remember the user&#39;s name and goals if they leave and come back.</p>
 <p><a href="https://mavo.io/docs/primer#mv-storage" target="_blank">Mavo page on defining the storage</a></p>
-<p>Both the <strong>name</strong> app and <strong>goals</strong> app information need to be saved.</p>
-<p>The type of storage is <strong>local</strong>.</p>
-<p>This means the information is only stored on the user&#39;s computer. It is never sent over the Internet.</p>
-<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
-      My name
-    &lt;/h2&gt;
-    &lt;section class=&#34;ui container&#34;  mv-app=&#34;name&#34; mv-storage=&#34;local&#34;&gt;
-      &lt;input&gt;
-    &lt;/section&gt;</code></pre>
-<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
-      Daily goals
-    &lt;/h2&gt;
-    &lt;section class=&#34;ui container&#34; mv-app=&#34;goals&#34; mv-storage=&#34;local&#34;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;</code></pre>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Label the parts for Mavo to save" duration="5">
-        <p>Mavo needs to know which parts of the HTML code need to be saved.</p>
-<p>You&#39;ll do this by adding the <strong>property </strong>attribute to the relevant HTML.</p>
-<h2 is-upgraded>My name</h2>
-<p>The <strong>input </strong>needs to be saved by Mavo.</p>
-<p>You&#39;ll give it the <strong>property </strong>of <strong>name</strong>.</p>
-<pre><code>      &lt;input property=&#34;name&#34;&gt;</code></pre>
-<h2 is-upgraded>Daily goals</h2>
+<p>The type of storage is <strong>local</strong>. This means the information is only stored on the person&#39;s computer. It is never sent over the Internet.</p>
+<pre><code>&lt;body class=&#34;ui container&#34; mv-app=&#34;daily-goals&#34; mv-storage=&#34;local&#34;&gt;</code></pre>
+<h2 is-upgraded>Label the parts for Mavo to save</h2>
+<p>Mavo needs to know which parts of the HTML code need to be saved.</p>
+<p>You&#39;ll do this by adding the <strong>property </strong>attribute to the relevant HTML tag.</p>
+<p>The <strong>name heading </strong>needs to be saved by Mavo, so give it the <strong>property </strong>of <strong>name</strong>.</p>
+<pre><code>&lt;h2 class=&#34;ui center aligned block header&#34; property=&#34;name&#34;&gt;
+  My name
+&lt;/h2&gt;</code></pre>
+<aside class="warning"><p>Run point</p>
+</aside>
+<p>Try running your page.</p>
+<p>Click the <strong>Edit </strong>button, <strong>change </strong>the name on your page, click <strong>Editing </strong>to stop editing, and then click <strong>Save</strong>.</p>
+<p>Close the tab with your app and reopen it. Your name should reappear!</p>
+<aside class="special"><ul>
+<li>A heading with the name of the app<strong> - DONE</strong></li>
+<li>A heading with the person&#39;s name<strong> - DONE</strong></li>
+<li>A heading for the person&#39;s goals<strong> - DONE</strong></li>
+<li>A list of their goals<strong> - DONE</strong></li>
+<li>Headings that look good<strong> - DONE</strong></li>
+<li>A list that looks good<strong> - DONE</strong></li>
+<li>The person can update and save their name<strong> - DONE</strong></li>
+<li>The person can update and save their goals</li>
+</ul>
+</aside>
 <p>Each <strong>list item</strong> - which is one of the user&#39;s goals - needs to be saved by Mavo.</p>
-<p>You&#39;ll give it the <strong>property </strong>of <strong>goal</strong>.</p>
-<p>You&#39;ll add <strong>mv-multiple</strong> so the user can add more than one goal.</p>
-<pre><code>      &lt;ul&gt;
-        &lt;li property=&#34;goal&#34; mv-multiple&gt;&lt;/li&gt;
-      &lt;/ul&gt;</code></pre>
+<p>Create an empty <strong>list item</strong> and give it the <strong>property </strong>of <strong>goal</strong>.</p>
+<p>Add <strong>mv-multiple</strong> so the user can add more than one goal.</p>
+<pre><code>&lt;ul&gt;
+  &lt;li property=&#34;goal&#34; mv-multiple&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
 
       </google-codelab-step>
@@ -323,20 +308,20 @@
 <p>Below are some examples of what you can do with Fomantic UI style classes.</p>
 <h2 is-upgraded>Add some colour to the headers</h2>
 <p><a href="https://fomantic-ui.com/elements/header.html#colored" target="_blank">Fomantic page on adding colours to text</a></p>
-<pre><code>    &lt;h1 class=&#34;ui violet center aligned header&#34;&gt;
-      My First Web App
-    &lt;/h1&gt;</code></pre>
-<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
-      My name
-    &lt;/h2&gt;</code></pre>
-<pre><code>    &lt;h2 class=&#34;ui violet block header&#34;&gt;
-      Daily goals
-    &lt;/h2&gt;</code></pre>
+<pre><code>&lt;h1 class=&#34;ui violet center aligned header&#34;&gt;
+  Daily Goals App
+&lt;/h1&gt;</code></pre>
+<pre><code>&lt;h2 class=&#34;ui violet block header&#34;&gt;
+  My name
+&lt;/h2&gt;</code></pre>
+<pre><code>&lt;h2 class=&#34;ui violet block header&#34;&gt;
+  Daily goals
+&lt;/h2&gt;</code></pre>
 <h2 is-upgraded>Add an icon to your main header</h2>
 <p><a href="https://fomantic-ui.com/elements/header.html#icon-headers" target="_blank">Fomantic page on adding a focussed icon to a header</a></p>
 <pre><code>    &lt;h1 class=&#34;ui center aligned icon header&#34;&gt;
       &lt;i class=&#34;circular tasks icon&#34;&gt;&lt;/i&gt;
-      My First Web App
+      Daily Goals App
     &lt;/h1&gt;</code></pre>
 <h2 is-upgraded>Add icons to the subheadings</h2>
 <p><a href="https://fomantic-ui.com/elements/header.html#icon" target="_blank">Fomantic page on adding an icon to a heading</a></p>
@@ -348,19 +333,6 @@
       &lt;i class=&#34;bullseye icon&#34;&gt;&lt;/i&gt;
       Daily goals
     &lt;/h2&gt;</code></pre>
-<h2 is-upgraded>Style the name input</h2>
-<p><a href="https://fomantic-ui.com/elements/input.html" target="_blank">Fomantic page on styling inputs</a></p>
-<pre><code>      &lt;div class=&#34;ui input&#34;&gt;
-        &lt;input property=&#34;name&#34;&gt;
-      &lt;/div&gt;</code></pre>
-<h2 is-upgraded>Add an icon to the name input</h2>
-<p><a href="https://fomantic-ui.com/elements/input.html" target="_blank">Fomantic page on styling labelled inputs</a></p>
-<pre><code>      &lt;div class=&#34;ui left corner labeled input&#34;&gt;
-        &lt;input property=&#34;name&#34;&gt;
-        &lt;div class=&#34;ui left corner label&#34;&gt;
-          &lt;i class=&#34;asterisk icon&#34;&gt;&lt;/i&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;</code></pre>
 
 
       </google-codelab-step>
