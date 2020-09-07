@@ -171,9 +171,9 @@
 <p>This helps the user see what information is where on the page.</p>
 <p>You can also add the <strong>center aligned</strong> class to put the header in the middle.</p>
 <p><a href="https://fomantic-ui.com/elements/header.html#page-headers" target="_blank">Fomantic page on headers</a></p>
-<pre><code>    &lt;h1 class=&#34;ui center aligned header&#34;&gt;
-      My First Web App
-    &lt;/h1&gt;</code></pre>
+<pre><code>&lt;h1 class=&#34;ui center aligned header&#34;&gt;
+  Daily Goals App
+&lt;/h1&gt;</code></pre>
 <p>Click <strong>Run </strong>to see your changes.</p>
 <aside class="warning"><p>Run point</p>
 </aside>
@@ -188,6 +188,8 @@
 <pre><code>&lt;h2 class=&#34;ui block header&#34;&gt;
   Daily goals
 &lt;/h2&gt;</code></pre>
+<aside class="warning"><p>Run point</p>
+</aside>
 <p>Now that the headings are styled we can tick off another feature.</p>
 <aside class="special"><ul>
 <li>A heading with the name of the app<strong> - DONE</strong></li>
@@ -200,23 +202,34 @@
 <li>The person can update and save their goals</li>
 </ul>
 </aside>
-<h2 is-upgraded>Make the body a container for everything else</h2>
+<h2 is-upgraded>Make a container for everything</h2>
 <p>The <strong>container </strong>class adds some space around the thing it&#39;s added to.</p>
 <p>This makes the page look less cluttered.</p>
+<p>Add an opening <code>&lt;body&gt;</code> HTML tag at the very start of <strong>index.html</strong>.</p>
+<p>Then, add a closing <code>&lt;/body&gt;</code> tag at the very bottom.</p>
+<p>Now, you can add a <strong>container</strong> class to the body opening tag.</p>
 <p><a href="https://fomantic-ui.com/elements/container.html#/definition" target="_blank">Fomantic page on containers</a></p>
-<pre><code>  &lt;body class=&#34;ui container&#34;&gt;</code></pre>
-<h2 is-upgraded>Make the sections containers for the inputs and list</h2>
-<p>You&#39;ll re-use the <strong>container</strong> class for the sections.</p>
+<pre><code>&lt;body class=&#34;ui container&#34;&gt;</code></pre>
+<aside class="warning"><p>Run point</p>
+</aside>
+<h2 is-upgraded>Make the goals a section</h2>
+<p>You can re-use the <strong>container</strong> class to make the goals part of the page look separate from the rest.</p>
 <p>This again helps spread things out and make the page look less cluttered.</p>
+<p>Add a <code>&lt;section&gt;</code> opening tag above your goals heading.</p>
+<p>Then, add a closing <code>&lt;/section&gt;</code> tag below your goals list.</p>
+<p>Now, you can add the container class to the section opening tag.</p>
 <p><a href="https://fomantic-ui.com/elements/container.html#/definition" target="_blank">Fomantic page on containers</a></p>
-<pre><code>    &lt;section class=&#34;ui container&#34;&gt;
-      &lt;input&gt;
-    &lt;/section&gt;</code></pre>
-<pre><code>    &lt;section class=&#34;ui container&#34;&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;</code></pre>
+<pre><code>&lt;section class=&#34;ui container&#34;&gt;
+  &lt;h2 class=&#34;ui block header&#34;&gt;
+    Daily goals
+  &lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;First goal&lt;/li&gt;
+    &lt;/li&gt;Second goal&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+<aside class="warning"><p>Run point</p>
+</aside>
 
 
       </google-codelab-step>
