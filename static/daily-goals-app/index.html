@@ -29,150 +29,182 @@
     
       <google-codelab-step label="Introduction" duration="5">
         <h2 is-upgraded>What you&#39;ll build</h2>
-<p>You&#39;ll build a web app that lets the user save their name and their daily goals.</p>
-<p class="image-container"><img style="width: 624.00px" src="img\2d4712e1e8d64c60.jpeg"></p>
+<p>You&#39;ll build an app that lets people use their phone to create and update lists of their goals for the day.</p>
+<p>It&#39;ll have the following features:</p>
+<aside class="special"><ul>
+<li>A heading with the name of the app</li>
+<li>A heading with the person&#39;s name</li>
+<li>A heading for the person&#39;s goals</li>
+<li>A list of their goals</li>
+<li>Headings that look good</li>
+<li>A list that looks good</li>
+<li>The person can update and save their name</li>
+<li>The person can update and save their goals</li>
+</ul>
+</aside>
+<p>Here&#39;s what it might look like:</p>
+<p class="image-container"><img style="width: 624.00px" src="img\97956149c2a282fe.png"></p>
 <h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
 <ul class="checklist">
-<li>How to do this.</li>
-<li>How to do that.</li>
+<li>How to write HTML code.</li>
+<li>How to style HTML code with CSS classes.</li>
+<li>How to make an app out of HTML and CSS.</li>
 </ul>
 <h2 is-upgraded>What you&#39;ll need</h2>
 <ul>
-<li>A code writing app such as Visual Studio code (<a href="https://code.visualstudio.com/" target="_blank">download</a>)</li>
+<li>A login to <a href="https://repl.it/" target="_blank">Repl.it</a></li>
 <li>That&#39;s it!</li>
 </ul>
 
 
       </google-codelab-step>
     
+      <google-codelab-step label="Start the project" duration="0">
+        <ol type="1" start="1">
+<li><strong>Login </strong>to <a href="https://repl.it/" target="_blank">Repl.it</a> and create a new <strong><code>HTML, CSS, and JS</code></strong> repl.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\865cbad72189ed5a.png"></p>
+<ol type="1" start="2">
+<li><strong>Delete </strong>the <strong>script.js</strong> and <strong>style.css</strong> files (we won&#39;t be using these)</li>
+<li><strong>Delete </strong>all the starting code in <strong>index.html</strong> (we&#39;ll be writing our own)</li>
+<li><strong>Rename </strong>your repl to something more appropriate, such as <strong>daily-goals</strong></li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\a21cdf3da46e7d09.png"></p>
+<p>Now you&#39;re ready to get coding!</p>
+
+
+      </google-codelab-step>
+    
       <google-codelab-step label="Write the HTML code" duration="10">
-        <h2 is-upgraded>Add the HTML starter code</h2>
-<p>The <strong>head</strong> part will have information <em>about</em> the page.</p>
-<p>It will only contain a link to some code that will kick-start this project for you.</p>
-<p>The <strong>body</strong> part will have everything that you can see <em>on</em> the page.</p>
-<p>This is where you will do all the work to create your web app.</p>
-<p>Both parts are inside the <strong>HTML</strong> tags.</p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-
-  &lt;head&gt;
-    &lt;script src=&#34;https://rrgs.nz/scripts&#34;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-    
-
-  &lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-<h2 is-upgraded>Add the HTML code for the app</h2>
-<p>First, the <strong>main heading</strong>.</p>
-<p>The HTML code for the main heading is <code>&lt;h1&gt;</code></p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-
-  &lt;head&gt;
-    &lt;script src=&#34;https://rrgs.nz/scripts&#34;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;h1&gt;
-      My First Web App
-    &lt;/h1&gt;
-    
-  &lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-<p>Second, the <strong>subheadings </strong>for <strong>My name</strong> and <strong>Daily goals</strong>.</p>
-<p>The HTML code for a subheading is <code>&lt;h2&gt;</code></p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html&gt;
-
-  &lt;head&gt;
-    &lt;script src=&#34;https://rrgs.nz/scripts&#34;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;h1&gt;
-      My First Web App
-    &lt;/h1&gt;
-
-    &lt;h2&gt;
-      My name
-    &lt;/h2&gt;
-
-    &lt;h2&gt;
-      Daily goals
-    &lt;/h2&gt;
-    
-  &lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-<p>Third, the <strong>sections </strong>under each subheading.</p>
-<p>The HTML code for a section is <code>&lt;section&gt;</code></p>
-<pre><code>    &lt;h2&gt;
-      My name
-    &lt;/h2&gt;
-    &lt;section&gt;
-
-    &lt;/section&gt;</code></pre>
-<pre><code>    &lt;h2&gt;
-      Daily goals
-    &lt;/h2&gt;
-    &lt;section&gt;
-
-    &lt;/section&gt;</code></pre>
-<p>Fourth, the empty <strong>name input</strong> and <strong>goals list</strong>.</p>
-<p>The <strong>name </strong>is an input where users can type. The HTML code is <code>&lt;input&gt;</code></p>
-<pre><code>    &lt;h2&gt;
-      My name
-    &lt;/h2&gt;
-    &lt;section&gt;
-      &lt;input&gt;
-    &lt;/section&gt;</code></pre>
-<p>The <strong>goals list</strong> is an unordered list of items.</p>
-<p>The HTML code for the unordered list is <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for each list item</p>
-<pre><code>    &lt;h2&gt;
-      Daily goals
-    &lt;/h2&gt;
-    &lt;section&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/section&gt;</code></pre>
+        <h2 is-upgraded>Try out some HTML code</h2>
+<p>Add this code to your <strong>index.html</strong> and click <strong>Run </strong>(green play button at the top of the page)</p>
+<pre><code>&lt;h1&gt;
+  Daily Goals App
+&lt;/h1&gt;</code></pre>
+<p>You&#39;ll see &#34;Daily Goals App&#34; written in big bold letters.</p>
+<p><code>&lt;h1&gt;</code> stands for <strong>heading 1</strong>, which is the biggest heading. It shows where the heading <strong>starts</strong>.</p>
+<p>You&#39;ll notice there&#39;s a <code>&lt;/h1&gt;</code> with a slash at the start. This shows where the heading <strong>ends</strong>.</p>
+<p><code>&lt;h1&gt;</code> is an <strong>opening </strong>tag, and <code>&lt;/h1&gt;</code> is a <strong>closing </strong>tag. Together, they make an <strong>HTML element</strong>.</p>
+<p>Try using some of these tags on your page.</p>
+<ul>
+<li><code>&lt;h2&gt;</code> - heading 2, which is slightly smaller than heading 1</li>
+<li><code>&lt;h3&gt;</code> - I think you get the idea</li>
+<li><code>&lt;p&gt;</code> - paragraph, which is just some normal text</li>
+</ul>
+<h2 is-upgraded>Add the HTML code for the headings</h2>
+<p>1. First, the <strong>main heading</strong>.</p>
+<p>This should be a <strong>heading 1 </strong><code>&lt;h1&gt;</code> because it&#39;s the most important.</p>
+<pre><code>&lt;h1&gt;
+  Daily Goals App
+&lt;/h1&gt;</code></pre>
+<p>2. Next, the <strong>name heading</strong>.</p>
+<p>This should be a <strong>heading 2 </strong><code>&lt;h2&gt;</code> because it&#39;s almost as important.</p>
+<pre><code>&lt;h2&gt;
+  My name
+&lt;/h2&gt;</code></pre>
+<p>3. Finally, the <strong>goals heading</strong>.</p>
+<p>This should be a <strong>heading 2 </strong><code>&lt;h2&gt;</code> because it&#39;s as important as the name.</p>
+<p><em>You decide how to write the HTML element.</em></p>
+<p>Click <strong>Run </strong>to see your changes.</p>
+<aside class="warning"><p>Run point</p>
+</aside>
+<p>We&#39;ve completed some features already!</p>
+<aside class="special"><ul>
+<li>A heading with the name of the app - <strong>DONE</strong></li>
+<li>A heading with the person&#39;s name - <strong>DONE</strong></li>
+<li>A heading for the person&#39;s goals - <strong>DONE</strong></li>
+<li>A list of their goals</li>
+<li>Headings that look good</li>
+<li>A list that looks good</li>
+<li>The person can update and save their name</li>
+<li>The person can update and save their goals</li>
+</ul>
+</aside>
+<h2 is-upgraded>Add the HTML code for the list</h2>
+<p>Each goal is an item in a list, or a <strong>list item</strong>.</p>
+<p>The HTML tag for a list item is <code>&lt;li&gt;</code>.</p>
+<p>Try adding some goals as list items to your page, under the goals heading.</p>
+<pre><code>&lt;h2&gt;
+  Daily Goals
+&lt;/h2&gt;
+&lt;li&gt;Learn HTML&lt;/li&gt;
+&lt;li&gt;Try out list items&lt;/li&gt;</code></pre>
+<p>Usually, list items will be inside a list element.</p>
+<p>The HTML tag for a list is <code>&lt;ul&gt;</code> which stands for <strong>unordered list</strong>. Unordered lists have bullet points.</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Learn HTML&lt;/li&gt;
+  &lt;li&gt;Try out list items&lt;/li&gt;
+&lt;/ul</code></pre>
+<p>Alternatively, you could use <code>&lt;ol&gt;</code> which stands for <strong>ordered list</strong>. Ordered lists are numbered.</p>
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;Learn HTML&lt;/li&gt;
+  &lt;li&gt;Try out list items&lt;/li&gt;
+&lt;/ol</code></pre>
+<p>You decide which type of list you prefer.</p>
+<p>Click <strong>Run </strong>to see your changes.</p>
+<aside class="warning"><p>Run point</p>
+</aside>
+<p>We&#39;ve completed even more features.</p>
+<aside class="special"><ul>
+<li>A heading with the name of the app<strong> - DONE</strong></li>
+<li>A heading with the person&#39;s name<strong> - DONE</strong></li>
+<li>A heading for the person&#39;s goals<strong> - DONE</strong></li>
+<li>A list of their goals<strong> - DONE</strong></li>
+<li>Headings that look good</li>
+<li>A list that looks good</li>
+<li>The person can update and save their name</li>
+<li>The person can update and save their goals</li>
+</ul>
+</aside>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Write the CSS code" duration="10">
         <p><strong>UI</strong> stands for user interface, which is the web page and its design.</p>
-<p>You&#39;ll add <strong>CSS classes</strong> to your HTML code to change the visual appearance and improve the UI.</p>
-<p>The classes you&#39;ll add are from a website called <strong>Fomantic UI</strong>. The contributors there have written lots of CSS code that you can use for free.</p>
+<p>You can add <strong>CSS classes</strong> to your HTML code to change the visual appearance and improve the UI.</p>
+<p>The classes you&#39;ll add are from a website called <a href="https://fomantic-ui.com/" target="_blank"><strong>Fomantic UI</strong></a>. The contributors there have written lots of CSS code that you can use for free.</p>
+<p>Connect your project to Fomantic UI by adding this line at the very bottom of <strong>index.html</strong></p>
+<pre><code>&lt;script src=&#34;https://rrgs.nz/scripts&#34;&gt;&lt;/script&gt;</code></pre>
+<h2 is-upgraded>Style the main heading</h2>
+<p>The <strong>header </strong>class makes the heading big and bold.</p>
+<p>This helps the user see what information is where on the page.</p>
+<p>You can also add the <strong>center aligned</strong> class to put the header in the middle.</p>
+<p><a href="https://fomantic-ui.com/elements/header.html#page-headers" target="_blank">Fomantic page on headers</a></p>
+<pre><code>    &lt;h1 class=&#34;ui center aligned header&#34;&gt;
+      My First Web App
+    &lt;/h1&gt;</code></pre>
+<p>Click <strong>Run </strong>to see your changes.</p>
+<aside class="warning"><p>Run point</p>
+</aside>
+<p>Compare the heading that you&#39;ve styled with the ones you haven&#39;t.</p>
+<h2 is-upgraded>Style the name and goals headings</h2>
+<p>The <strong>block </strong>class works with the <strong>header </strong>class to add a background.</p>
+<p>This further helps show the user where things are on the page.</p>
+<p><a href="https://fomantic-ui.com/elements/header.html#block" target="_blank">Fomantic page on block headers</a></p>
+<pre><code>&lt;h2 class=&#34;ui block header&#34;&gt;
+  My name
+&lt;/h2&gt;</code></pre>
+<pre><code>&lt;h2 class=&#34;ui block header&#34;&gt;
+  Daily goals
+&lt;/h2&gt;</code></pre>
+<p>Now that the headings are styled we can tick off another feature.</p>
+<aside class="special"><ul>
+<li>A heading with the name of the app<strong> - DONE</strong></li>
+<li>A heading with the person&#39;s name<strong> - DONE</strong></li>
+<li>A heading for the person&#39;s goals<strong> - DONE</strong></li>
+<li>A list of their goals<strong> - DONE</strong></li>
+<li>Headings that look good<strong> - DONE</strong></li>
+<li>A list that looks good</li>
+<li>The person can update and save their name</li>
+<li>The person can update and save their goals</li>
+</ul>
+</aside>
 <h2 is-upgraded>Make the body a container for everything else</h2>
 <p>The <strong>container </strong>class adds some space around the thing it&#39;s added to.</p>
 <p>This makes the page look less cluttered.</p>
 <p><a href="https://fomantic-ui.com/elements/container.html#/definition" target="_blank">Fomantic page on containers</a></p>
 <pre><code>  &lt;body class=&#34;ui container&#34;&gt;</code></pre>
-<h2 is-upgraded>Style the main heading</h2>
-<p>The <strong>header </strong>class makes the heading big and bold.</p>
-<p>This helps the user see what information is where on the page.</p>
-<p>You&#39;ll also add the <strong>center aligned</strong> class to put the header in the middle.</p>
-<p><a href="https://fomantic-ui.com/elements/header.html#page-headers" target="_blank">Fomantic page on headers</a></p>
-<pre><code>    &lt;h1 class=&#34;ui center aligned header&#34;&gt;
-      My First Web App
-    &lt;/h1&gt;</code></pre>
-<h2 is-upgraded>Style the name and goals headings</h2>
-<p>The <strong>block </strong>class works with the <strong>header </strong>class to add a background.</p>
-<p>This further helps show the user where things are on the page.</p>
-<p><a href="https://fomantic-ui.com/elements/header.html#block" target="_blank">Fomantic page on block headers</a></p>
-<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
-      My name
-    &lt;/h2&gt;</code></pre>
-<pre><code>    &lt;h2 class=&#34;ui block header&#34;&gt;
-      Daily goals
-    &lt;/h2&gt;</code></pre>
 <h2 is-upgraded>Make the sections containers for the inputs and list</h2>
 <p>You&#39;ll re-use the <strong>container</strong> class for the sections.</p>
 <p>This again helps spread things out and make the page look less cluttered.</p>
