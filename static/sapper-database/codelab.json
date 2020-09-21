@@ -1,0 +1,22 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-08-25T22:14:48Z",
+  "id": "sapper-database-tutorial",
+  "duration": 35,
+  "title": "Add a Firebase Database to a Sapper Site",
+  "authors": "Dave Hullen",
+  "summary": "In this codelab, you'll learn how to add persistent storage to your Sapper app with Firebase.",
+  "source": "1SKQf_gjXMgJf4s_Yxw9tTrL--Erq0DKL6wuJllRFeiQ",
+  "theme": "sapper",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Sapper"
+  ],
+  "tags": [],
+  "url": "sapper-database-tutorial"
+}

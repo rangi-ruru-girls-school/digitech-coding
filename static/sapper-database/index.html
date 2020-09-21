@@ -1,0 +1,189 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Add a Firebase Database to a Sapper Site</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="sapper-database-tutorial"
+                  title="Add a Firebase Database to a Sapper Site"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <p class="image-container"><img style="width: 624.00px" src="img\6e6f791564a55277.png"></p>
+<h2 is-upgraded>What you&#39;ll build</h2>
+<ul>
+<li>A database to store objects from your existing web app.</li>
+</ul>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>What a database is and does.</li>
+<li>How to create and set up a Firebase database.</li>
+<li>How to connect your web app to the database.</li>
+</ul>
+<h2 is-upgraded>What you&#39;ll need</h2>
+<ul>
+<li>Knowledge of HTML, CSS, JavaScript, and <a href="https://svelte.dev/" target="_blank">Svelte</a>.</li>
+<li>A web app with some data that needs to be stored.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a Firebase Project" duration="5">
+        <h2 is-upgraded>Register with Firebase</h2>
+<p>Go to <a href="https://firebase.google.com/" target="_blank">Firebase</a></p>
+<p>Login with your Rangi Ruru email address</p>
+<p class="image-container"><img style="width: 288.50px" src="img\e0520982b7803249.png"></p>
+<aside class="special"><p><strong>Tip:</strong><em> If you don&#39;t already have a Google account with your Rangi Ruru email, create one.</em></p>
+</aside>
+<h2 is-upgraded>Create a project</h2>
+<p><a href="https://console.firebase.google.com/" target="_blank"><strong>Go to console</strong></a> in the top right of the screen and click <strong>Create a project</strong></p>
+<p class="image-container"><img style="width: 624.00px" src="img\6f0191a6c9c44a20.png"></p>
+<p>Follow the steps to create your project.</p>
+<p>It might take a few moments to set up everything for the first time.</p>
+<aside class="special"><p><strong>Tip:</strong><em> You do </em><strong><em>not </em></strong><em>need to enable Google Analytics.</em></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your app" duration="10">
+        <p>Add a new web app to your Firebase project by clicking the <strong>&lt;/&gt;</strong> icon.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\de1d97a021b69ec9.png"></p>
+<h2 is-upgraded>Step 1</h2>
+<p>The <strong>name </strong>should be the same or similar to your app&#39;s name that you&#39;ve been developing.</p>
+<aside class="special"><p><strong>Tip: </strong><em>You do </em><strong><em>not </em></strong><em>need to tick Firebase Hosting at this time.</em></p>
+</aside>
+<p class="image-container"><img style="width: 624.00px" src="img\26555ed0d975f3f.png"></p>
+<h2 is-upgraded>Step 2</h2>
+<p>The Firebase SDK is a connection to all the code your app will access to send and receive data from your Firebase database.</p>
+<p>When you&#39;re adding the Firebase SDK, copy and paste the code that Firebase is providing into your <code>template.html</code> file.</p>
+<p>It needs to go <strong>after </strong><code>&lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;</code></p>
+<p>And <strong>before </strong><code>%sapper.scripts%</code></p>
+<h3 is-upgraded>template.html</h3>
+<pre><code>&lt;body&gt;
+  &lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;
+
+  &lt;!-- The core Firebase JS SDK is always required
+  and must be listed first --&gt;
+  &lt;script src=&#34;https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js&#34;&gt;&lt;/script&gt;
+
+  &lt;!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries --&gt;
+
+  &lt;script&gt;
+    // Your web app&#39;s Firebase configuration
+
+    var firebaseConfig = {
+      apiKey: &#34;AIzaSyB4s5bRSRSoiAI1r4BXbTukIVlO9ElGk_o&#34;,
+      authDomain: &#34;tester-5369d.firebaseapp.com&#34;,
+      databaseURL: &#34;https://tester-5369d.firebaseio.com&#34;,
+      projectId: &#34;tester-5369d&#34;,
+      storageBucket: &#34;tester-5369d.appspot.com&#34;,
+      messagingSenderId: &#34;618210748546&#34;,
+      appId: &#34;1:618210748546:web:c2f0f8b2ab44e1dccc2c9b&#34;
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  &lt;/script&gt;
+
+  %sapper.scripts%
+&lt;/body&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a database" duration="2">
+        <p>Click on the orange <strong>Cloud Firestore</strong> tile to create the database for this project, then click <strong>Create database</strong>.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\ff30bef67a5caa9b.png"></p>
+<p>Click <strong>Next </strong>on the <em>Production mode</em> page, and <strong>Done </strong>on the <em>Location page</em>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add some data" duration="10">
+        <h2 is-upgraded>Create a collection</h2>
+<p>A Collection is the name for a group of data items. Our practice data will be Barry Batman and Thomas Tornado, so the Collection of these items will be called <strong><em>People</em></strong>.</p>
+<p>Create a collection by clicking <strong>Start collection</strong>.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\e518c4139f926346.png"></p>
+<p>Give your Collection the ID <code>People</code> and click <strong>Next</strong>.</p>
+<h2 is-upgraded>Add the first document</h2>
+<p>Each document will represent a different person.</p>
+<p>Leave the document ID on auto because it needs to be unique for every person.</p>
+<aside class="special"><p><strong>Tip</strong>: <em>Using the name as an ID isn&#39;t a good idea because you can&#39;t guarantee that two people won&#39;t have the same name.</em></p>
+</aside>
+<p class="image-container"><img style="width: 624.00px" src="img\3595c23a97457f0.png"></p>
+<ul>
+<li>The first field can be <code>firstName</code> with the type <code>String</code> and value <code>Barry</code></li>
+<li>The second field can be <code>lastName</code> with the type <code>String</code> and value <code>Batman</code></li>
+<li>The third field can be <code>age</code> with the type <code>number</code> and value <code>18</code></li>
+</ul>
+<p>Hit <strong>Save </strong>and you&#39;ll see your first document representing the <code>person</code>, <code>Barry Batman</code>.</p>
+<h2 is-upgraded>Add another document</h2>
+<p>Create a new person called Thomas Tornado who is 19 years old.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\f47494e68d0f3401.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Allow access" duration="3">
+        <p>Databases often store information that you want to control access to, like people&#39;s email addresses or even passwords. Firebase lets you do that with rules.</p>
+<p>When you first create your database, by default no one can access anything. This is to make sure you don&#39;t accidentally share something you don&#39;t want to.</p>
+<p>Your database doesn&#39;t store anything sensitive yet, so we&#39;ll change the rules so that anyone can read or write information to the collections.</p>
+<h2 is-upgraded>Change the rules</h2>
+<p>Go to the <strong>Rules </strong>tab of your database.</p>
+<p>Change line 5 so that it says <code>true</code> instead of <code>false</code>.</p>
+<pre><code>rules_version = &#39;2&#39;;
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}</code></pre>
+<p class="image-container"><img style="width: 624.00px" src="img\41268d985f9dc51b.png"></p>
+<h2 is-upgraded>Publish the changes</h2>
+<p>Click Publish to save the rule change you&#39;ve made.</p>
+<p>Your web app will now be allowed to create, read, update, and delete things in your Firebase database.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\6b24953352db04b5.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="You&#39;re ready" duration="0">
+        <p>Your database is now set up and ready to use from your web app.</p>
+<p>The next step is to write code inside your app to connect and communicate with Firebase. You&#39;ve already added the configuration to template.html, now it&#39;s time to </p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
