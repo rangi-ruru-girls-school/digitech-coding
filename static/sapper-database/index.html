@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <meta name="theme-color" content="#4F7DC9">
   <meta charset="UTF-8">
-  <title>Add a Firebase Database to a Sapper Site</title>
+  <title>Add a Firebase Database to a Sapper App</title>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
@@ -23,7 +23,7 @@
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
   <google-codelab codelab-gaid=""
                   id="sapper-database-tutorial"
-                  title="Add a Firebase Database to a Sapper Site"
+                  title="Add a Firebase Database to a Sapper App"
                   environment="web"
                   feedback-link="">
     
@@ -66,57 +66,10 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Add your app" duration="10">
-        <p>Add a new web app to your Firebase project by clicking the <strong>&lt;/&gt;</strong> icon.</p>
-<p class="image-container"><img style="width: 624.00px" src="img\de1d97a021b69ec9.png"></p>
-<h2 is-upgraded>Step 1</h2>
-<p>The <strong>name </strong>should be the same or similar to your app&#39;s name that you&#39;ve been developing.</p>
-<aside class="special"><p><strong>Tip: </strong><em>You do </em><strong><em>not </em></strong><em>need to tick Firebase Hosting at this time.</em></p>
-</aside>
-<p class="image-container"><img style="width: 624.00px" src="img\26555ed0d975f3f.png"></p>
-<h2 is-upgraded>Step 2</h2>
-<p>The Firebase SDK is a connection to all the code your app will access to send and receive data from your Firebase database.</p>
-<p>When you&#39;re adding the Firebase SDK, copy and paste the code that Firebase is providing into your <code>template.html</code> file.</p>
-<p>It needs to go <strong>after </strong><code>&lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;</code></p>
-<p>And <strong>before </strong><code>%sapper.scripts%</code></p>
-<h3 is-upgraded>template.html</h3>
-<pre><code>&lt;body&gt;
-  &lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;
-
-  &lt;!-- The core Firebase JS SDK is always required
-  and must be listed first --&gt;
-  &lt;script src=&#34;https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js&#34;&gt;&lt;/script&gt;
-
-  &lt;!-- TODO: Add SDKs for Firebase products that you want to use
-  https://firebase.google.com/docs/web/setup#available-libraries --&gt;
-
-  &lt;script&gt;
-    // Your web app&#39;s Firebase configuration
-
-    var firebaseConfig = {
-      apiKey: &#34;AIzaSyB4s5bRSRSoiAI1r4BXbTukIVlO9ElGk_o&#34;,
-      authDomain: &#34;tester-5369d.firebaseapp.com&#34;,
-      databaseURL: &#34;https://tester-5369d.firebaseio.com&#34;,
-      projectId: &#34;tester-5369d&#34;,
-      storageBucket: &#34;tester-5369d.appspot.com&#34;,
-      messagingSenderId: &#34;618210748546&#34;,
-      appId: &#34;1:618210748546:web:c2f0f8b2ab44e1dccc2c9b&#34;
-    };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  &lt;/script&gt;
-
-  %sapper.scripts%
-&lt;/body&gt;</code></pre>
-
-
-      </google-codelab-step>
-    
       <google-codelab-step label="Create a database" duration="2">
-        <p>Click on the orange <strong>Cloud Firestore</strong> tile to create the database for this project, then click <strong>Create database</strong>.</p>
-<p class="image-container"><img style="width: 624.00px" src="img\ff30bef67a5caa9b.png"></p>
-<p>Click <strong>Next </strong>on the <em>Production mode</em> page, and <strong>Done </strong>on the <em>Location page</em>.</p>
+        <p>Click on the orange <strong>Develop</strong> menu item and select <strong>Cloud Firestore</strong>. Click <strong>Create database</strong> to create the database for this project.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\d1fe981c9bed145f.png"></p>
+<p>Click <strong>Next </strong>on the <em>Production mode</em> page, and <strong>Enable </strong>on the <em>Location page</em>.</p>
 
 
       </google-codelab-step>
@@ -125,23 +78,23 @@
         <h2 is-upgraded>Create a collection</h2>
 <p>A Collection is the name for a group of data items. Our practice data will be Barry Batman and Thomas Tornado, so the Collection of these items will be called <strong><em>People</em></strong>.</p>
 <p>Create a collection by clicking <strong>Start collection</strong>.</p>
-<p class="image-container"><img style="width: 624.00px" src="img\e518c4139f926346.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\c50013f5f8563951.png"></p>
 <p>Give your Collection the ID <code>People</code> and click <strong>Next</strong>.</p>
 <h2 is-upgraded>Add the first document</h2>
 <p>Each document will represent a different person.</p>
-<p>Leave the document ID on auto because it needs to be unique for every person.</p>
-<aside class="special"><p><strong>Tip</strong>: <em>Using the name as an ID isn&#39;t a good idea because you can&#39;t guarantee that two people won&#39;t have the same name.</em></p>
-</aside>
-<p class="image-container"><img style="width: 624.00px" src="img\3595c23a97457f0.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\6aef157c4201fe0.png"></p>
 <ul>
 <li>The first field can be <code>firstName</code> with the type <code>String</code> and value <code>Barry</code></li>
 <li>The second field can be <code>lastName</code> with the type <code>String</code> and value <code>Batman</code></li>
 <li>The third field can be <code>age</code> with the type <code>number</code> and value <code>18</code></li>
+<li>The document ID can be the same as the <code>firstName</code> for now, i.e. <code>Barry</code></li>
 </ul>
+<aside class="special"><p><strong>Tip</strong>: <em>Using the name as an ID isn&#39;t the best practice because you can&#39;t guarantee that two people won&#39;t have the same name, however it will work for this example.</em></p>
+</aside>
 <p>Hit <strong>Save </strong>and you&#39;ll see your first document representing the <code>person</code>, <code>Barry Batman</code>.</p>
 <h2 is-upgraded>Add another document</h2>
 <p>Create a new person called Thomas Tornado who is 19 years old.</p>
-<p class="image-container"><img style="width: 624.00px" src="img\f47494e68d0f3401.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\ec23b4590c32b1d9.png"></p>
 
 
       </google-codelab-step>
@@ -161,18 +114,211 @@ service cloud.firestore {
     }
   }
 }</code></pre>
-<p class="image-container"><img style="width: 624.00px" src="img\41268d985f9dc51b.png"></p>
 <h2 is-upgraded>Publish the changes</h2>
 <p>Click Publish to save the rule change you&#39;ve made.</p>
 <p>Your web app will now be allowed to create, read, update, and delete things in your Firebase database.</p>
-<p class="image-container"><img style="width: 624.00px" src="img\6b24953352db04b5.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\33f7b1083e05ca90.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add your app" duration="10">
+        <p>Add a new web app to your Firebase project by clicking the <strong>&lt;/&gt;</strong> icon.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\54c9d7d6b1d35b2c.png"></p>
+<h2 is-upgraded>Step 1</h2>
+<p>The <strong>name </strong>should be the same or similar to your app&#39;s name that you&#39;ve been developing.</p>
+<aside class="special"><p><strong>Tip: </strong><em>You do </em><strong><em>not </em></strong><em>need to tick Firebase Hosting at this time.</em></p>
+</aside>
+<p class="image-container"><img style="width: 624.00px" src="img\6aa5793bfacaf026.png"></p>
+<h2 is-upgraded>Step 2</h2>
+<p>The Firebase SDK is a connection to all the code your app will access to send and receive data from your Firebase database.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\24c228de63204ad9.png"></p>
+<p>When you&#39;re adding the Firebase SDK, copy and paste the code that Firebase is providing into the <code>template.html</code> file of your Sapper project.</p>
+<p>It needs to go <strong>after </strong><code>&lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;</code></p>
+<p>And <strong>before </strong><code>%sapper.scripts%</code></p>
+<h3 is-upgraded>template.html</h3>
+<pre><code>&lt;body&gt;
+  &lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;
+
+  &lt;!-- The core Firebase JS SDK is always required and must be listed first --&gt;
+  &lt;script src=&#34;https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js&#34;&gt;&lt;/script&gt;
+
+  &lt;!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries --&gt;
+
+  &lt;script&gt;
+    // Your web app&#39;s Firebase configuration
+    var firebaseConfig = {
+      apiKey: &#34;AIzaSyCKE3BtdLKuICdn9ODDxvj-5cn8oMRe0uE&#34;,
+      authDomain: &#34;sapper-example-d8353.firebaseapp.com&#34;,
+      databaseURL: &#34;https://sapper-example-d8353.firebaseio.com&#34;,
+      projectId: &#34;sapper-example-d8353&#34;,
+      storageBucket: &#34;sapper-example-d8353.appspot.com&#34;,
+      messagingSenderId: &#34;885118614592&#34;,
+      appId: &#34;1:885118614592:web:69447bfdca87f827d173a5&#34;
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  &lt;/script&gt;
+
+  %sapper.scripts%
+&lt;/body&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Setup your Sapper App" duration="0">
+        <h2 is-upgraded>Add Cloud Firestore</h2>
+<p>You&#39;ve already added Firebase, but now we need to add the actual database, which is <strong>Cloud Firestore</strong>.</p>
+<p>Add two lines to your <strong>template.html</strong> file.</p>
+<p><strong>Cloud Firestore</strong> is the Firebase product you want to use, so add this line below the <code>TODO</code> comment.</p>
+<p><code>&lt;script src=&#34;https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js&#34;&gt;&lt;/script&gt;</code></p>
+<p>With the database product code added you can now add code to connect to the database. This will create a constant variable that represents the database for the rest of your Sapper App.</p>
+<p><code>const db = firebase.firestore()</code></p>
+<h3 is-upgraded>template.html</h3>
+<pre><code>&lt;body&gt;
+  &lt;div id=&#39;sapper&#39;&gt;%sapper.html%&lt;/div&gt;
+
+
+  &lt;!-- The core Firebase JS SDK is always required and must be listed first --&gt;
+  &lt;script src=&#34;https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js&#34;&gt;&lt;/script&gt;
+
+  &lt;!-- TODO: Add SDKs for Firebase products that you want to use
+                  https://firebase.google.com/docs/web/setup#available-libraries --&gt;
+  &lt;script src=&#34;https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js&#34;&gt;&lt;/script&gt;
+
+  &lt;script&gt;
+    // Your web app&#39;s Firebase configuration
+    var firebaseConfig = {
+      apiKey: &#34;AIzaSyCKE3BtdLKuICdn9ODDxvj-5cn8oMRe0uE&#34;,
+      authDomain: &#34;sapper-example-d8353.firebaseapp.com&#34;,
+      databaseURL: &#34;https://sapper-example-d8353.firebaseio.com&#34;,
+      projectId: &#34;sapper-example-d8353&#34;,
+      storageBucket: &#34;sapper-example-d8353.appspot.com&#34;,
+      messagingSenderId: &#34;885118614592&#34;,
+      appId: &#34;1:885118614592:web:69447bfdca87f827d173a5&#34;
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // create the database variable so that the rest of the app can use it
+    const db = firebase.firestore()
+  &lt;/script&gt;
+
+
+  %sapper.scripts%
+&lt;/body&gt;</code></pre>
+<p>The template.html file is now complete ✔</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add test code" duration="0">
+        <h2 is-upgraded>Create an interface</h2>
+<p>In <strong>index.svelte</strong> add the following code to create an interface to work with.</p>
+<p>This is simply three labelled inputs.</p>
+<aside class="special"><p><strong>Tip: </strong><em>You will get errors because the values and functions don&#39;t exist yet - we&#39;ll do that next!</em></p>
+</aside>
+<pre><code>&lt;!-- this is just a section to make the page look nice --&gt;
+&lt;section class=&#34;content section&#34;&gt;
+
+  &lt;h1&gt;People&lt;/h1&gt;
+
+  &lt;!-- a place to enter the first name --&gt;
+  &lt;label&gt;
+    First name: &lt;input bind:value={person.firstName}&gt;
+  &lt;/label&gt;
+
+  &lt;!-- a place to enter the last name --&gt;
+  &lt;label&gt;
+    Last name: &lt;input bind:value={person.lastName}&gt;
+  &lt;/label&gt;
+
+  &lt;!-- a place to enter the age --&gt;
+  &lt;label&gt;
+    Age: &lt;input bind:value={person.age}&gt;
+  &lt;/label&gt;
+
+  &lt;button on:click={getPerson}&gt;Get Person&lt;/button&gt;
+
+  &lt;button on:click={savePerson}&gt;Save Person&lt;/button&gt;
+
+&lt;/section&gt;</code></pre>
+<h2 is-upgraded>Create the script skeleton</h2>
+<p>The test code needs three main pieces:</p>
+<ul>
+<li>a <code>person</code> object</li>
+<li>a <code>savePerson()</code> function to send the person to the database</li>
+<li>a <code>getPerson()</code> function to retrieve a person from the database</li>
+</ul>
+<p>Add the code for these three pieces to the top of <strong>index.svelte</strong>.</p>
+<pre><code>&lt;script&gt;
+  // create an empty person object
+  let person = {
+    firstName: &#39;&#39;,
+    lastName: &#39;&#39;,
+    age: &#39;&#39;,
+  }
+
+
+  function savePerson() {
+    console.log(&#39;savePerson() clicked&#39;)
+  }
+
+
+  function getPerson() {
+    console.log(&#39;getPerson() clicked&#39;)
+  }
+&lt;/script&gt;</code></pre>
+<aside class="special"><p><strong>Tip: </strong><em>You can now do </em><strong><em>npm install</em></strong><em> and </em><strong><em>npm run dev</em></strong><em> to check your code is working.</em></p>
+</aside>
+<h2 is-upgraded>Save a person</h2>
+<p>Saving a person to the database is as simple as listing where to save to:</p>
+<ol type="1" start="1">
+<li>The database called <code>db</code></li>
+<li>The collection called <code>Person</code></li>
+<li>The document called <code>person.firstName</code></li>
+</ol>
+<p>The code to do it looks like this:</p>
+<p><code>// save the person object to the database under their first name</code></p>
+<p><code>db.collection(&#39;People&#39;).doc(person.firstName).set(person)</code></p>
+<p>Add that line into your <code>savePerson()</code> function.</p>
+<p>Try entering your name and age into the app and clicking <strong>Save Person</strong></p>
+<p>Check in your <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a> and your <strong>Cloud Firestore</strong> database should have your new person ✔</p>
+<h2 is-upgraded>Get a person</h2>
+<p>Retrieving a person from the database is as simple as listing where to get it from:</p>
+<ol type="1" start="1">
+<li>The database called <code>db</code></li>
+<li>The collection called <code>Person</code></li>
+<li>The document called <code>person.firstName</code></li>
+</ol>
+<p>The code to do it looks like this:</p>
+<p><code>// get the document from the database for the given name</code></p>
+<p><code>let personDoc = db.collection(&#39;People&#39;).doc(person.firstName).get()</code></p>
+<p>This line will give us the <em>document</em>, but we want the actual person <em>object</em>, which requires another step to get from the document:</p>
+<p><code>// get the data from the person document</code></p>
+<p><code>person = personDoc.data()</code></p>
+<p>Finally, getting the person from the database might take a while depending on the Internet connection speed. You can tell the JavaScript to wait for the document to arrive before trying to get the data by adding <strong><code>async</code></strong><strong> </strong>before the name of the function, and <strong><code>await</code></strong> at the start of call to the database.</p>
+<p>Your final <strong><code>getPerson()</code></strong> function should look like this:</p>
+<pre><code>async function getPerson() {
+  // get the document from the database for the given name
+  let personDoc = await db.collection(&#39;People&#39;).doc(person.firstName).get()
+
+  // get the data from the person document
+  person = personDoc.data()
+}</code></pre>
+<p>Try typing <em>Barry </em>into the <strong>First name</strong> input and clicking <strong>Get person</strong>.</p>
+<p>The <strong>Last name</strong> input should fill with <em>Batman </em>and the <strong>Age </strong>should fill with <em>18 </em>✔</p>
+<p>Try <em>Thomas </em>and your own first name as well ✔</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="You&#39;re ready" duration="0">
-        <p>Your database is now set up and ready to use from your web app.</p>
-<p>The next step is to write code inside your app to connect and communicate with Firebase. You&#39;ve already added the configuration to template.html, now it&#39;s time to </p>
+        <p>Your Firebase database is now set up and your Sapper app can communicate with it.</p>
+<p>This tutorial is just an example of how it works. You may have to expand or remix it to get it working in your own apps.</p>
+<p>You can see the full source code for the example <a href="https://github.com/MrHullen/sapper-database-example" target="_blank">here</a>.</p>
+<p>Good luck!</p>
 
 
       </google-codelab-step>
